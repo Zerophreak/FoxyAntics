@@ -4,6 +4,8 @@ using System.Runtime.CompilerServices;
 
 public partial class Player : CharacterBody2D
 {
+	private enum PlayerState { Idle, Run, Jump, Fall, Hurt } 
+
 	private const float GRAVITY = 690.0f;
 	private const float JUMP_VELOCITY = -260.0f;
 	private const float MAX_FALL = 400.0f;
@@ -11,6 +13,9 @@ public partial class Player : CharacterBody2D
 
 	[Export] private Sprite2D _sprite2D;
 	[Export] private AudioStreamPlayer2D _sound;
+	[Export] private AnimationPlayer _animationPlayer;
+
+	private PlayerState _state = PlayerState.Idle; 
 
 	public override void _Ready()
 	{
@@ -20,6 +25,7 @@ public partial class Player : CharacterBody2D
 	{	
 		Velocity = GetInput((float)delta);
 		MoveAndSlide();
+		CalculateStates();
 	}
 
     private Vector2 GetInput(float delta)
@@ -50,5 +56,54 @@ public partial class Player : CharacterBody2D
 
 		return newVelocity;
     }
+
+	private void CalculateStates()
+    {
+		PlayerState newState;
+
+		if (IsOnFloor())
+        {
+            if (Velocity.X == 0)
+            
+                newState = PlayerState.Idle;
+			else
+				newState = PlayerState.Run; 
+        }
+		else
+        {
+            if (Velocity.Y > 0 )
+				newState = PlayerState.Fall;
+			else
+				newState = PlayerState.Jump;
+        }
+
+		SetState(newState); 
+    }
+
+	private void SetState(PlayerState newState)
+    {
+        if(newState == _state) return;
+
+		_state = newState;
+
+		// Idle, Run, Jump, Fall. 
+		switch (_state)
+        {
+            case PlayerState.Idle:
+				_animationPlayer.Play("idle");
+				break;
+			case PlayerState.Run:
+				_animationPlayer.Play("run");
+				break;
+			case PlayerState.Jump:
+				_animationPlayer.Play("jump");
+				break;
+			case PlayerState.Fall:
+				_animationPlayer.Play("fall");
+				break;
+        }
+    }
+
+
 
 }
