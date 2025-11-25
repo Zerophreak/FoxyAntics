@@ -4,6 +4,8 @@ using System.Runtime.CompilerServices;
 
 public partial class Player : CharacterBody2D
 {
+	public const string GroupName = "Player";
+	
 	private enum PlayerState { Idle, Run, Jump, Fall, Hurt } 
 
 	private const float GRAVITY = 690.0f;
@@ -11,10 +13,12 @@ public partial class Player : CharacterBody2D
 	private const float MAX_FALL = 400.0f;
 	private const float RUN_SPEED = 120.0f;
 
+	[Export] private float _yFallOff = 100.0f;
 	[Export] private Sprite2D _sprite2D;
 	[Export] private AudioStreamPlayer2D _sound;
 	[Export] private AnimationPlayer _animationPlayer;
-
+	[Export] private Label _debugLabel;
+	
 	private PlayerState _state = PlayerState.Idle; 
 
 	public override void _Ready()
@@ -26,7 +30,25 @@ public partial class Player : CharacterBody2D
 		Velocity = GetInput((float)delta);
 		MoveAndSlide();
 		CalculateStates();
+		UpdateDebugLabel();
 	}
+
+	private void UpdateDebugLabel()
+    {
+        string s = "";
+		s += $"floor: {IsOnFloor()}\n";
+		s += $"{_state}\n";
+		s += $"{Velocity.X:0f}, {Velocity.Y:0f}";
+		_debugLabel.Text = s; 
+    }
+
+	private void FallenOff()
+    {
+        if(GlobalPosition.Y > _yFallOff)
+        {
+           SetPhysicsProcess(false); 
+        }
+    }
 
     private Vector2 GetInput(float delta)
     {
@@ -103,7 +125,5 @@ public partial class Player : CharacterBody2D
 				break;
         }
     }
-
-
 
 }
