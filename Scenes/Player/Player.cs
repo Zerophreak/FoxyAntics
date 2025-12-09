@@ -18,19 +18,23 @@ public partial class Player : CharacterBody2D
 	[Export] private AudioStreamPlayer2D _sound;
 	[Export] private AnimationPlayer _animationPlayer;
 	[Export] private Label _debugLabel;
+	[Export] private Shooter _shooter;
 	
 	private PlayerState _state = PlayerState.Idle; 
 
 	public override void _Ready()
-	{
-	}
+    {
+        
+    }
 
 	public override void _PhysicsProcess(double delta)
 	{	
 		Velocity = GetInput((float)delta);
 		MoveAndSlide();
 		CalculateStates();
+		Shoot();
 		UpdateDebugLabel();
+		FallenOff();
 	}
 
 	private void UpdateDebugLabel()
@@ -40,6 +44,14 @@ public partial class Player : CharacterBody2D
 		s += $"{_state}\n";
 		s += $"{Velocity.X:0f}, {Velocity.Y:0f}";
 		_debugLabel.Text = s; 
+    }
+
+	private void Shoot()
+    {
+        if(Input.IsActionJustPressed("shoot"))
+        {
+            _shooter.Shoot(_sprite2D.FlipH ? Vector2.Left : Vector2.Right);
+        }
     }
 
 	private void FallenOff()
