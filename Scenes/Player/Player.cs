@@ -12,22 +12,28 @@ public partial class Player : CharacterBody2D
 	private const float JUMP_VELOCITY = -260.0f;
 	private const float MAX_FALL = 400.0f;
 	private const float RUN_SPEED = 120.0f;
+	private bool _invincible = false;
 
 	[Export] private float _yFallOff = 100.0f;
 	[Export] private Sprite2D _sprite2D;
 	[Export] private AudioStreamPlayer2D _sound;
 	[Export] private AnimationPlayer _animationPlayer;
+	[Export] private AnimationPlayer _animationPlayerInvincible;
+	[Export] private Area2D _hitBox;
 	[Export] private Label _debugLabel;
 	[Export] private Shooter _shooter;
+	[Export] private Timer _invincibleTimer;
+
 	
 	private PlayerState _state = PlayerState.Idle; 
 
 	public override void _Ready()
     {
-        
+        _invincibleTimer.Timeout += OnInvincibleTimerTimeOut;
+		_hitBox.AreaEntered += OnHitBoxAreaEntered; 
     }
 
-	public override void _PhysicsProcess(double delta)
+    public override void _PhysicsProcess(double delta)
 	{	
 		Velocity = GetInput((float)delta);
 		MoveAndSlide();
@@ -90,6 +96,33 @@ public partial class Player : CharacterBody2D
 
 		return newVelocity;
     }
+
+	private void ApplyHit()
+	{
+		if(_invincible) return;
+
+		GoInvincible();
+		SoundManager.PlayClip(_sound, SoundManager.SOUND_DAMAGE);
+	}
+
+	private void GoInvincible()
+	{
+		_invincible = true; 
+		_animationPlayerInvincible.Play("invincible");
+		_invincibleTimer.Start();
+	}
+
+	private void OnHitBoxAreaEntered(Area2D area)
+	{
+		ApplyHit();
+	}
+
+
+	private void OnInvincibleTimerTimeOut()
+	{
+		_invincible = false;
+		_animationPlayerInvincible.Play("RESET");
+	}
 
 	private void CalculateStates()
     {

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpg4anvpoyhtq"]
+[gd_scene load_steps=16 format=3 uid="uid://dpg4anvpoyhtq"]
 
 [ext_resource type="Script" uid="uid://65h08kx8v6vy" path="res://Scenes/Player/Player.cs" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://qgtu5ev8dmbp" path="res://Assets/player/player.png" id="1_s0eop"]
@@ -116,17 +116,59 @@ _data = {
 &"run": SubResource("Animation_h54ih")
 }
 
+[sub_resource type="Animation" id="Animation_fk5o5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t26db"]
+resource_name = "invincible"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_825xp"]
+_data = {
+&"RESET": SubResource("Animation_fk5o5"),
+&"invincible": SubResource("Animation_t26db")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 height = 26.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_sprite2D", "_sound", "_animationPlayer", "_debugLabel", "_shooter") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_sprite2D", "_sound", "_animationPlayer", "_animationPlayerInvincible", "_hitBox", "_debugLabel", "_shooter", "_invincibleTimer") groups=["Player"]]
 collision_layer = 0
 script = ExtResource("1_ft8w5")
 _sprite2D = NodePath("Sprite2D")
 _sound = NodePath("Sound")
 _animationPlayer = NodePath("AnimationPlayer")
+_animationPlayerInvincible = NodePath("AnimationPlayerInvincible")
+_hitBox = NodePath("Hitbox")
 _debugLabel = NodePath("DebugLabel")
 _shooter = NodePath("Shooter")
+_invincibleTimer = NodePath("InvincibleTimer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_s0eop")
@@ -144,6 +186,9 @@ libraries = {
 autoplay = "idle"
 
 [node name="AnimationPlayerInvincible" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_825xp")
+}
 
 [node name="DebugLabel" type="Label" parent="."]
 offset_left = 1.0
@@ -170,3 +215,7 @@ shape = SubResource("CapsuleShape2D_ft8w5")
 [node name="Shooter" parent="." instance=ExtResource("3_h54ih")]
 _speed = 80.0
 _bulletKey = 2
+
+[node name="InvincibleTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
