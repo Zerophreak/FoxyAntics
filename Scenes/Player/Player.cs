@@ -14,6 +14,8 @@ public partial class Player : CharacterBody2D
 	private const float RUN_SPEED = 120.0f;
 	private bool _invincible = false;
 
+	private static readonly Vector2 HURT_JUMP = new Vector2(0,-130.0f);
+
 	[Export] private float _yFallOff = 100.0f;
 	[Export] private Sprite2D _sprite2D;
 	[Export] private AudioStreamPlayer2D _sound;
@@ -23,6 +25,7 @@ public partial class Player : CharacterBody2D
 	[Export] private Label _debugLabel;
 	[Export] private Shooter _shooter;
 	[Export] private Timer _invincibleTimer;
+	[Export] private Timer _hurtTimer;
 
 	
 	private PlayerState _state = PlayerState.Idle; 
@@ -31,6 +34,8 @@ public partial class Player : CharacterBody2D
     {
         _invincibleTimer.Timeout += OnInvincibleTimerTimeOut;
 		_hitBox.AreaEntered += OnHitBoxAreaEntered; 
+		_hitBox.AreaEntered += OnHitBoxAreaEntered;
+		_hurtTimer.Timeout += OnHurtTimerTimeout;
     }
 
     public override void _PhysicsProcess(double delta)
@@ -74,6 +79,8 @@ public partial class Player : CharacterBody2D
 		newVelocity.X = 0;
 		newVelocity.Y += GRAVITY * delta;
 
+		if(_state == PlayerState.Hurt) return newVelocity;
+
 		if(Input.IsActionPressed("left"))
         {
             newVelocity.X = -RUN_SPEED;
@@ -102,7 +109,14 @@ public partial class Player : CharacterBody2D
 		if(_invincible) return;
 
 		GoInvincible();
+		SetState(PlayerState.Hurt);
 		SoundManager.PlayClip(_sound, SoundManager.SOUND_DAMAGE);
+	}
+	private void ApplyHurtJump()
+	{
+		Velocity = HURT_JUMP;
+		_animationPlayer.Play("hurt");
+		_hurtTimer.Start();
 	}
 
 	private void GoInvincible()
@@ -118,6 +132,11 @@ public partial class Player : CharacterBody2D
 	}
 
 
+	private void OnHurtTimerTimeout()
+	{
+		SetState(PlayerState.Idle);
+	}
+
 	private void OnInvincibleTimerTimeOut()
 	{
 		_invincible = false;
@@ -126,6 +145,8 @@ public partial class Player : CharacterBody2D
 
 	private void CalculateStates()
     {
+		if(_state == PlayerState.Hurt) return;
+
 		PlayerState newState;
 
 		if (IsOnFloor())
@@ -167,6 +188,9 @@ public partial class Player : CharacterBody2D
 				break;
 			case PlayerState.Fall:
 				_animationPlayer.Play("fall");
+				break;
+			case PlayerState.Hurt:
+				ApplyHurtJump();
 				break;
         }
     }
