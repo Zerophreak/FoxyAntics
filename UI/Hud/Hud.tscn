@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=3 uid="uid://slho3tsfp0fc"]
+
+[ext_resource type="LabelSettings" uid="uid://c57087kb6t0iv" path="res://Resources/LG_white_48.tres" id="1_pa3cw"]
+[ext_resource type="LabelSettings" uid="uid://b2dyrr3deoxuq" path="res://Resources/LG_blue_64.tres" id="1_rt2hf"]
+[ext_resource type="LabelSettings" uid="uid://dwoj7dgthifc0" path="res://Resources/LG_white_24.tres" id="3_7ha4p"]
+[ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="4_d3x5k"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.00392157, 0.0980392, 0.866667)
+
+[node name="VBCComplete" type="VBoxContainer" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CompleteLabel" type="Label" parent="ColorRect/VBCComplete"]
+layout_mode = 2
+text = "Level Complete
+"
+label_settings = ExtResource("1_rt2hf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PressLabel" type="Label" parent="ColorRect/VBCComplete"]
+layout_mode = 2
+text = "Press Jump For Next Level
+"
+label_settings = ExtResource("1_pa3cw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBCGameOver" type="VBoxContainer" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="ColorRect/VBCGameOver"]
+layout_mode = 2
+text = "Game Over
+"
+label_settings = ExtResource("1_rt2hf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PressLabel" type="Label" parent="ColorRect/VBCGameOver"]
+layout_mode = 2
+text = "Press Jump For Next Level
+"
+label_settings = ExtResource("1_pa3cw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="ScoreLabel" type="Label" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0000"
+label_settings = ExtResource("3_7ha4p")
+vertical_alignment = 1
+
+[node name="HBHearts" type="HBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Hearts" type="TextureRect" parent="MC/HBHearts"]
+layout_mode = 2
+texture = ExtResource("4_d3x5k")
+stretch_mode = 4
+
+[node name="Hearts2" type="TextureRect" parent="MC/HBHearts"]
+layout_mode = 2
+texture = ExtResource("4_d3x5k")
+stretch_mode = 4
+
+[node name="Hearts3" type="TextureRect" parent="MC/HBHearts"]
+layout_mode = 2
+texture = ExtResource("4_d3x5k")
+stretch_mode = 4
+
+[node name="Hearts4" type="TextureRect" parent="MC/HBHearts"]
+layout_mode = 2
+texture = ExtResource("4_d3x5k")
+stretch_mode = 4
+
+[node name="Hearts5" type="TextureRect" parent="MC/HBHearts"]
+layout_mode = 2
+texture = ExtResource("4_d3x5k")
+stretch_mode = 4
