@@ -161,6 +161,7 @@ height = 26.0
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_sprite2D", "_sound", "_animationPlayer", "_animationPlayerInvincible", "_hitBox", "_debugLabel", "_shooter", "_invincibleTimer", "_hurtTimer") groups=["Player"]]
 collision_layer = 0
 script = ExtResource("1_ft8w5")
+_lives = 5
 _sprite2D = NodePath("Sprite2D")
 _sound = NodePath("Sound")
 _animationPlayer = NodePath("AnimationPlayer")

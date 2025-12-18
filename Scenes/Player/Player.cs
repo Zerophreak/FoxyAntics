@@ -17,6 +17,7 @@ public partial class Player : CharacterBody2D
 	private static readonly Vector2 HURT_JUMP = new Vector2(0,-130.0f);
 
 	[Export] private float _yFallOff = 100.0f;
+	[Export] private int _lives = 3; 
 	[Export] private Sprite2D _sprite2D;
 	[Export] private AudioStreamPlayer2D _sound;
 	[Export] private AnimationPlayer _animationPlayer;
@@ -67,10 +68,10 @@ public partial class Player : CharacterBody2D
 
 	private void FallenOff()
     {
-        if(GlobalPosition.Y > _yFallOff)
-        {
-           SetPhysicsProcess(false); 
-        }
+        if(GlobalPosition.Y < _yFallOff)
+			return;
+        _lives = 1;
+		ReduceLives();
     }
 
     private Vector2 GetInput(float delta)
@@ -104,9 +105,23 @@ public partial class Player : CharacterBody2D
 		return newVelocity;
     }
 
+	private bool ReduceLives()
+	{
+		_lives--;
+		GD.Print("Reducelifes", _lives);
+		if (_lives <= 0 )
+		{
+			SetPhysicsProcess(false);
+			GD.Print("dead", _lives);
+			return false;
+		}
+		return true;
+	}
+
 	private void ApplyHit()
 	{
 		if(_invincible) return;
+		if(!ReduceLives()) return;
 
 		GoInvincible();
 		SetState(PlayerState.Hurt);
