@@ -1,17 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://slho3tsfp0fc"]
+[gd_scene load_steps=6 format=3 uid="uid://slho3tsfp0fc"]
 
+[ext_resource type="Script" uid="uid://bumsjgd3ljmkb" path="res://UI/Hud/Hud.cs" id="1_d3x5k"]
 [ext_resource type="LabelSettings" uid="uid://c57087kb6t0iv" path="res://Resources/LG_white_48.tres" id="1_pa3cw"]
 [ext_resource type="LabelSettings" uid="uid://b2dyrr3deoxuq" path="res://Resources/LG_blue_64.tres" id="1_rt2hf"]
 [ext_resource type="LabelSettings" uid="uid://dwoj7dgthifc0" path="res://Resources/LG_white_24.tres" id="3_7ha4p"]
 [ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="4_d3x5k"]
 
-[node name="Hud" type="Control"]
+[node name="Hud" type="Control" node_paths=PackedStringArray("_scoreLabel", "_hbHearts")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d3x5k")
+_scoreLabel = NodePath("MC/ScoreLabel")
+_hbHearts = NodePath("MC/HBHearts")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
