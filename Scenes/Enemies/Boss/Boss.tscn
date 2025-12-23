@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c8qpobn0or6ca" path="res://Assets/enemies/boss/boss.png" id="1_sq1s0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onyic"]
-size = Vector2(10, 240)
+size = Vector2(10, 250)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxirr"]
 size = Vector2(24, 54)
@@ -26,22 +26,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visual:position")
+tracks/1/path = NodePath("Visual/BossSprite:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Visual/BossSprite:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -193,11 +181,12 @@ states/pulse/node = SubResource("AnimationNodeAnimation_bkrwd")
 states/pulse/position = Vector2(632, 105)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_ycee1"), "RESET", "arrive", SubResource("AnimationNodeStateMachineTransition_p6b2q"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_lme58"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "arrive", "pulse", SubResource("AnimationNodeStateMachineTransition_5ectx"), "hit", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
 
-[node name="Boss" type="Node2D" node_paths=PackedStringArray("_animationTree", "_trigger", "_hitBox")]
+[node name="Boss" type="Node2D" node_paths=PackedStringArray("_animationTree", "_trigger", "_hitBox", "_visual")]
 script = ExtResource("1_hxirr")
 _animationTree = NodePath("AnimationTree")
 _trigger = NodePath("Trigger")
 _hitBox = NodePath("Visual/HitBox")
+_visual = NodePath("Visual")
 
 [node name="Trigger" type="Area2D" parent="."]
 position = Vector2(0, -1)
@@ -205,10 +194,11 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
-position = Vector2(-150, -100)
+position = Vector2(-119.5, -91)
 shape = SubResource("RectangleShape2D_onyic")
 
 [node name="Visual" type="Node2D" parent="."]
+position = Vector2(-21.3872, -132.177)
 
 [node name="BossSprite" type="Sprite2D" parent="Visual"]
 position = Vector2(0, -32)
