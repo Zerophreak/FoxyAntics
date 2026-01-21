@@ -5,7 +5,7 @@ using System.ComponentModel;
 public partial class Boss : Node2D
 {
 	[Export] private AnimationTree _animationTree;
-	//TODO trigger doesnt play the arrive is on auto
+	//TODO: somehow boss is already truggered before entering past the trigger and plays out of order. Attack tree starts playing when hit.
 	[Export] private Area2D _trigger; 
 	[Export] private Area2D _hitBox;
 	[Export] private Node2D _visual;
@@ -24,7 +24,6 @@ public partial class Boss : Node2D
 		_trigger.AreaEntered += OntriggerAreaEntered;
 		_hitBox.AreaEntered += OnHitBoxAreaEntered;
 		_stateMachine = (AnimationNodeStateMachinePlayback)_animationTree.Get("parameters/playback");
-
 	}
 
     private void OntriggerAreaEntered(Area2D area)
@@ -43,9 +42,8 @@ public partial class Boss : Node2D
 		_lives--;
 		if(_lives <= 0 )
 			Die();
-
+			
 	}
-
 	private void Die()
 	{
 		if(_hitTween != null)
@@ -77,6 +75,7 @@ public partial class Boss : Node2D
 		_hitTween.TweenProperty(_visual, Node2D.PropertyName.Position.ToString(), Vector2.Zero, 1.6f);
 		
 	}
+	
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
