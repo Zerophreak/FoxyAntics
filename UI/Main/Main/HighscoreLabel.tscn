@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://blcbql038ke4t"]
+
+[ext_resource type="Script" uid="uid://dptri66t10s1t" path="res://UI/Main/HighscoreLabel.cs" id="1_6uhfb"]
+[ext_resource type="LabelSettings" uid="uid://05e1nl8v0sui" path="res://UI/Main/LG_Blue_24.tres" id="1_8trq2"]
+[ext_resource type="LabelSettings" uid="uid://dy6h3x5x5nc5n" path="res://UI/Main/LG_Blue_18.tres" id="2_6uhfb"]
+
+[node name="HighscoreLabel" type="VBoxContainer" node_paths=PackedStringArray("_scoreLabel", "_dateLabel")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6uhfb")
+_scoreLabel = NodePath("ScoreLabel")
+_dateLabel = NodePath("DateLabel")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 2
+text = "0000"
+label_settings = ExtResource("1_8trq2")
+
+[node name="DateLabel" type="Label" parent="."]
+layout_mode = 2
+text = "26/01/2026"
+label_settings = ExtResource("2_6uhfb")
+horizontal_alignment = 1
+vertical_alignment = 1
