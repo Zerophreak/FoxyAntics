@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://doetk01cfjxw"]
+
+[ext_resource type="PackedScene" uid="uid://b1g6l2eoqtc22" path="res://Scenes/Moving Platform/MovingPlatform.tscn" id="1_lkfed"]
+
+[sub_resource type="Curve2D" id="Curve2D_phr0a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 284, 136, 0, 0, 0, 0, 555, 137, 0, 0, 0, 0, 284, 136, 0, 0, 0, 0, 284, 136, 0, 0, 0, 0, 404, 236, 0, 0, 0, 0, 284, 136, 0, 0, 0, 0, 553, 136, 0, 0, 0, 0, 401, 236)
+}
+point_count = 8
+
+[node name="PathTest" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_phr0a")
+
+[node name="MovingPlatform" parent="Path2D" instance=ExtResource("1_lkfed")]
+position = Vector2(284, 136)
