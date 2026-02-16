@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bflby4wvkptpt"]
+
+[ext_resource type="Script" uid="uid://bp1nkh1spgsqj" path="res://Scenes/Hitbox/HitBox.cs" id="1_pfua8"]
+
+[node name="HitBox" type="Area2D"]
+script = ExtResource("1_pfua8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
