@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpfqo8qiroa4f"]
+
+[ext_resource type="Script" uid="uid://qo3y0x3gj0qg" path="res://Scenes/LevelBase/LevelBase.cs" id="1_5ufo3"]
+
+[node name="LevelBase" type="Node" unique_id=1432951507]
+script = ExtResource("1_5ufo3")
