@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dck4yx8qv6qkw"]
 
 [ext_resource type="Script" uid="uid://5fwujp8jf3yt" path="res://Scenes/Main/Main.cs" id="1_p8rbg"]
-[ext_resource type="Texture2D" uid="uid://d3d30rtbvdfmd" path="res://assets/backgrounds/game_background_3/game_background_3.1.png" id="2_i3fi7"]
-[ext_resource type="AudioStream" uid="uid://b6ds552w35la3" path="res://assets/sound/Farm Frolics.ogg" id="3_o8wgc"]
-[ext_resource type="FontFile" uid="uid://ns2c5sck25dv" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_w20t6"]
+[ext_resource type="Texture2D" uid="uid://gw4ll5rcuo5q" path="res://Assets/backgrounds/game_background_2/game_background_2.png" id="2_i3fi7"]
+[ext_resource type="AudioStream" uid="uid://bxaobp1dc6jjq" path="res://assets/sound/Farm Frolics.ogg" id="3_o8wgc"]
+[ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_w20t6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aw1lf"]
 font = ExtResource("4_w20t6")
