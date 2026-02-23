@@ -1,2 +1,2 @@
-res://Scenes/Player/Player.cs
-res://Scenes/Main/Main.cs
+res://Scenes/Enemies/EnemyBase.tscn
+res://Scenes/HitBox/Hitbox.tscn
