@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771858685
+::res://::1772456296
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -88,20 +88,20 @@ LG_blue_64.tres::LabelSettings::4289201097798638372::1771857454::0::1::::<><><>0
 LG_pink_96.tres::LabelSettings::7602017344158547840::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_white_24.tres::LabelSettings::8732921665724531969::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
-::res://Scenes/::1771858712
-::res://Scenes/Enemies/::1771859407
-EnemyBase.tscn::PackedScene::6322101859871324996::1771859407::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png
+::res://Scenes/::1771859465
+::res://Scenes/Enemies/::1771859888
+EnemyBase.tscn::PackedScene::6322101859871324996::1771859888::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
 ::res://Scenes/Enemies/EnemyBase/::1771858919
-::res://Scenes/HitBox/::0
-Hitbox.tscn::PackedScene::5770442110239843659::1771859445::0::1::::<><><>0<>0<><>::
+::res://Scenes/HitBox/::1771859889
+Hitbox.tscn::PackedScene::5770442110239843659::1771859889::0::1::::<><><>0<>0<><>::
 ::res://Scenes/LevelBase/::1771857454
 LevelBase.cs::CSharpScript::1153667071511381746::1771857454::0::1::::<>Node<><>0<>0<><>::
 LevelBase.tscn::PackedScene::3450573458406995423::1771857454::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://d3h3jkhf3t1y3::::res://assets/tiles/Terrain (16x16).png
 ::res://Scenes/Main/::1771857454
 Main.cs::CSharpScript::2117359185024073803::1771857454::0::1::::<>Control<><>0<>0<><>::
 Main.tscn::PackedScene::7322088427511776818::1771857454::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://assets/sound/Farm Frolics.ogg<>uid://bg0t5xmaeaogu::::res://assets/fonts/LuckiestGuy-Regular.ttf
-::res://Scenes/Player/::1771857454
+::res://Scenes/Player/::1772181548
 Player.cs::CSharpScript::7777292425589243284::1771857454::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Player.tscn::PackedScene::8290706201624041080::1771857454::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://dh6ke6v57847s::::res://assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://dsrtys67vin0w::::res://assets/sound/jump.wav
+Player.tscn::PackedScene::8290706201624041080::1772181548::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://dh6ke6v57847s::::res://assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://dsrtys67vin0w::::res://assets/sound/jump.wav
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::
