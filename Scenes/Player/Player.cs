@@ -10,6 +10,7 @@ public partial class Player : CharacterBody2D
 
 	[Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
+	[Export] private Sprite2D _sprite;
 
 	private bool _jumped = false;
 
@@ -51,6 +52,11 @@ public partial class Player : CharacterBody2D
 			velocity.Y = JUMP_SPEED;
 			_jumped = false;
 			_jumpSound.Play();
+		}
+
+		if(!MathF.IsZeroApprox(velocity.X))
+		{
+			_sprite.flipH = velocity.X < 0;
 		}
 
 		return velocity;
