@@ -5,3 +5,4 @@ res://Globals/SignalHub.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
 res://Scenes/LevelBase/LevelBase.tscn
+res://Scenes/LevelBase/LevelBase.cs

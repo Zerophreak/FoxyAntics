@@ -124,11 +124,12 @@ _data = {
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ji083"]
 
-[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound")]
+[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
 collision_layer = 0
 script = ExtResource("1_h54ih")
 _debugLabel = NodePath("DebugLabel")
 _jumpSound = NodePath("JumpSound")
+_sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814302173]
 texture = ExtResource("1_s0eop")
