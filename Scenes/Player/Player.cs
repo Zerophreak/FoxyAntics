@@ -54,7 +54,7 @@ public partial class Player : CharacterBody2D
 			_jumpSound.Play();
 		}
 
-		if(!MathF.IsZeroApprox(velocity.X))
+		if(!Mathf.IsZeroApprox(velocity.X))
 		{
 			_sprite.flipH = velocity.X < 0;
 		}
