@@ -56,7 +56,7 @@ public partial class Player : CharacterBody2D
 
 		if(!Mathf.IsZeroApprox(velocity.X))
 		{
-			_sprite.flipH = velocity.X < 0;
+			_sprite.FlipH = velocity.X < 0;
 		}
 
 		return velocity;
