@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Repositories\\FoxyAntics\\FoxyAnticsRedone.csproj": {}
+    "F:\\Dev\\Projects\\FoxyAntics\\FoxyAnticsRedone.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Repositories\\FoxyAntics\\FoxyAnticsRedone.csproj": {
+    "F:\\Dev\\Projects\\FoxyAntics\\FoxyAnticsRedone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Repositories\\FoxyAntics\\FoxyAnticsRedone.csproj",
+        "projectUniqueName": "F:\\Dev\\Projects\\FoxyAntics\\FoxyAnticsRedone.csproj",
         "projectName": "FoxyAnticsRedone",
-        "projectPath": "C:\\Dev\\Repositories\\FoxyAntics\\FoxyAnticsRedone.csproj",
-        "packagesPath": "C:\\Users\\raymo\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Repositories\\FoxyAntics\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "F:\\Dev\\Projects\\FoxyAntics\\FoxyAnticsRedone.csproj",
+        "packagesPath": "C:\\Users\\Raymon\\.nuget\\packages\\",
+        "outputPath": "F:\\Dev\\Projects\\FoxyAntics\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\raymo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Raymon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -71,26 +78,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
