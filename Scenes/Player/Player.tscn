@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dqecyqfebayce"]
 
 [ext_resource type="Script" uid="uid://di2m4txn8sflk" path="res://Scenes/Player/Player.cs" id="1_h54ih"]
-[ext_resource type="Texture2D" uid="uid://qgtu5ev8dmbp" path="res://assets/player/player.png" id="1_s0eop"]
+[ext_resource type="Texture2D" uid="uid://qgtu5ev8dmbp" path="res://Assets/player/player.png" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://c5dbi2mxgf10f" path="res://Scenes/PlayerCam/PlayerCam.tscn" id="2_ft8w5"]
-[ext_resource type="AudioStream" uid="uid://c82jcfga5jbed" path="res://assets/sound/jump.wav" id="4_ude3g"]
+[ext_resource type="AudioStream" uid="uid://c82jcfga5jbed" path="res://Assets/sound/jump.wav" id="4_ude3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 7.0
@@ -122,7 +122,39 @@ _data = {
 &"run": SubResource("Animation_fk5o5")
 }
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ji083"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ude3g"]
+animation = &"hurt"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jmcll"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4wape"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t26db"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fk5o5"]
+advance_mode = 2
+advance_expression = "still == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_825xp"]
+advance_mode = 2
+advance_expression = "still == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ji083"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0kmp4"]
+states/hurt/node = SubResource("AnimationNodeAnimation_ude3g")
+states/hurt/position = Vector2(440, 209.30545)
+states/idle/node = SubResource("AnimationNodeAnimation_jmcll")
+states/idle/position = Vector2(349, 100)
+states/run/node = SubResource("AnimationNodeAnimation_4wape")
+states/run/position = Vector2(513, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_t26db"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_fk5o5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_825xp"), "hurt", "idle", SubResource("AnimationNodeStateMachineTransition_ji083")]
+graph_offset = Vector2(0, 18.30544)
 
 [node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
 collision_layer = 0
@@ -156,4 +188,5 @@ libraries/ = SubResource("AnimationLibrary_825xp")
 autoplay = &"idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1183541758]
-tree_root = SubResource("AnimationNodeStateMachine_ji083")
+tree_root = SubResource("AnimationNodeStateMachine_0kmp4")
+anim_player = NodePath("../AnimationPlayer")
