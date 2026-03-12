@@ -134,7 +134,7 @@ advance_expression = "IsFalling == false"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0kmp4"]
 advance_mode = 2
-advance_expression = "IsFalling == true"
+advance_expression = "IsFalling ==ad true"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i5acl"]
 advance_mode = 2
