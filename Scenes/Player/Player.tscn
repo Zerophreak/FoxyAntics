@@ -122,9 +122,6 @@ _data = {
 &"run": SubResource("Animation_fk5o5")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ude3g"]
-animation = &"hurt"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jmcll"]
 animation = &"idle"
 
@@ -133,27 +130,32 @@ animation = &"run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t26db"]
 advance_mode = 2
+advance_expression = "IsStill == false"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fk5o5"]
 advance_mode = 2
-advance_expression = "IsStill == false"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_825xp"]
-advance_mode = 2
 advance_expression = "IsStill == true"
 
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_825xp"]
+states/idle/node = SubResource("AnimationNodeAnimation_jmcll")
+states/idle/position = Vector2(420, 100)
+states/run/node = SubResource("AnimationNodeAnimation_4wape")
+states/run/position = Vector2(591, 101)
+transitions = ["idle", "run", SubResource("AnimationNodeStateMachineTransition_t26db"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_fk5o5")]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ude3g"]
+animation = &"hurt"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ji083"]
-switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0kmp4"]
+states/Grounded/node = SubResource("AnimationNodeStateMachine_825xp")
+states/Grounded/position = Vector2(398, 107.305435)
+states/Start/position = Vector2(192, 107.305435)
 states/hurt/node = SubResource("AnimationNodeAnimation_ude3g")
 states/hurt/position = Vector2(440, 209.30545)
-states/idle/node = SubResource("AnimationNodeAnimation_jmcll")
-states/idle/position = Vector2(349, 100)
-states/run/node = SubResource("AnimationNodeAnimation_4wape")
-states/run/position = Vector2(513, 100)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_t26db"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_fk5o5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_825xp"), "hurt", "idle", SubResource("AnimationNodeStateMachineTransition_ji083")]
+transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083")]
 graph_offset = Vector2(0, 18.30544)
 
 [node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
@@ -189,4 +191,5 @@ autoplay = &"idle"
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1183541758]
 tree_root = SubResource("AnimationNodeStateMachine_0kmp4")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")

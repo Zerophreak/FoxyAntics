@@ -9,6 +9,8 @@ public partial class Player : CharacterBody2D
 	private const float MAX_FALL = 350.0f;
 
 	public bool IsStill {get {return Mathf.IsZeroApprox(Velocity.X); }}
+	public bool IsFalling { get { return Velocity.Y > 0; }}
+	public bool OnFloor { get { return IsOnFloor();}}
 
 	[Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
