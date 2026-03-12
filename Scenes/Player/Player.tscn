@@ -122,6 +122,30 @@ _data = {
 &"run": SubResource("Animation_fk5o5")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t26db"]
+animation = &"fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fk5o5"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_825xp"]
+advance_mode = 2
+advance_expression = "IsFalling == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0kmp4"]
+advance_mode = 2
+advance_expression = "IsFalling == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i5acl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_epg6k"]
+states/fall/node = SubResource("AnimationNodeAnimation_t26db")
+states/fall/position = Vector2(393, 112)
+states/jump/node = SubResource("AnimationNodeAnimation_fk5o5")
+states/jump/position = Vector2(571, 112)
+transitions = ["fall", "jump", SubResource("AnimationNodeStateMachineTransition_825xp"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_0kmp4"), "Start", "fall", SubResource("AnimationNodeStateMachineTransition_i5acl")]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jmcll"]
 animation = &"idle"
 
@@ -136,12 +160,15 @@ advance_expression = "IsStill == false"
 advance_mode = 2
 advance_expression = "IsStill == true"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0u84n"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_825xp"]
 states/idle/node = SubResource("AnimationNodeAnimation_jmcll")
 states/idle/position = Vector2(420, 100)
 states/run/node = SubResource("AnimationNodeAnimation_4wape")
 states/run/position = Vector2(591, 101)
-transitions = ["idle", "run", SubResource("AnimationNodeStateMachineTransition_t26db"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_fk5o5")]
+transitions = ["idle", "run", SubResource("AnimationNodeStateMachineTransition_t26db"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_fk5o5"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_0u84n")]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ude3g"]
 animation = &"hurt"
@@ -149,13 +176,23 @@ animation = &"hurt"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ji083"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_esmjy"]
+advance_mode = 2
+advance_expression = "OnFloor == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6tu5v"]
+advance_mode = 2
+advance_expression = "OnFloor == true"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0kmp4"]
+states/Air/node = SubResource("AnimationNodeStateMachine_epg6k")
+states/Air/position = Vector2(586, 107.305435)
 states/Grounded/node = SubResource("AnimationNodeStateMachine_825xp")
 states/Grounded/position = Vector2(398, 107.305435)
 states/Start/position = Vector2(192, 107.305435)
 states/hurt/node = SubResource("AnimationNodeAnimation_ude3g")
-states/hurt/position = Vector2(440, 209.30545)
-transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083")]
+states/hurt/position = Vector2(494, 206.30545)
+transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083"), "Grounded", "Air", SubResource("AnimationNodeStateMachineTransition_esmjy"), "Air", "Grounded", SubResource("AnimationNodeStateMachineTransition_6tu5v")]
 graph_offset = Vector2(0, 18.30544)
 
 [node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
