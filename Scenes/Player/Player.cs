@@ -8,6 +8,8 @@ public partial class Player : CharacterBody2D
 	private const float JUMP_SPEED = -270.0f;
 	private const float MAX_FALL = 350.0f;
 
+	public bool IsStill {get {return Mathf.IsZeroApprox(Velocity.X); }}
+
 	[Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
 	[Export] private Sprite2D _sprite;

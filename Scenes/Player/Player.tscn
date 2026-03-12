@@ -136,11 +136,11 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fk5o5"]
 advance_mode = 2
-advance_expression = "still == false"
+advance_expression = "IsStill == false"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_825xp"]
 advance_mode = 2
-advance_expression = "still == true"
+advance_expression = "IsStill == true"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ji083"]
 switch_mode = 2
