@@ -2,10 +2,28 @@ using Godot;
 using System;
 using System.ComponentModel;
 
+[Tool]
 public partial class Hitbox : Area2D
 { 
-	[Export] private Shape2D _shape;
+	[Export] public Shape2D Shape
+	{
+		get
+		{
+			return _shape;
+		}
+		set
+		{
+			_shape = value;
+			if(Engine.IsEditorHint() && _collisionShape2D != null)
+			{
+				_collisionShape2D.Shape = _shape;
+				_collisionShape2D.QueueRedraw();
+			}
+		}
+	}
 	[Export] private CollisionShape2D _collisionShape2D;
+
+	private Shape2D _shape;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
