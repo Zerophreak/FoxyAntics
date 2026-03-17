@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ccinfblagv2xn"]
+
+[ext_resource type="PackedScene" uid="uid://cwcqdgvcb3j6s" path="res://Scenes/Enemies/EnemyBase/EnemyBase.tscn" id="1_g4qkl"]
+
+[node name="Snail" unique_id=740995919 instance=ExtResource("1_g4qkl")]

@@ -23,6 +23,7 @@ public partial class Hitbox : Area2D
 	}
 	[Export] private CollisionShape2D _collisionShape2D;
 
+
 	private Shape2D _shape;
 
 	// Called when the node enters the scene tree for the first time.
