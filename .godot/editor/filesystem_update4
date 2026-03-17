@@ -1,0 +1,9 @@
+res://Scenes/Enemies/EnemyBase/EnemyBase.tscn
+res://Scenes/HitBox/Hitbox.tscn
+res://Scenes/HitBox/Hitbox.cs
+res://Scenes/LevelBase/LevelBase.cs
+res://Scenes/Player/Player.cs
+res://Scenes/Main/Main.cs
+res://Globals/SignalHub.cs
+res://Globals/ScoreManager.cs
+res://Globals/GameManager.cs

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773651452
+::res://::1773749449
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -90,8 +90,8 @@ LG_white_24.tres::LabelSettings::8732921665724531969::1771857454::0::1::::<><><>
 LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 ::res://Scenes/::1771859465
 ::res://Scenes/Enemies/::1771859888
-EnemyBase.tscn::PackedScene::6322101859871324996::1771859888::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
 ::res://Scenes/Enemies/EnemyBase/::1771858919
+EnemyBase.tscn::PackedScene::6322101859871324996::1771859888::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
 ::res://Scenes/HitBox/::1771859889
 Hitbox.tscn::PackedScene::5770442110239843659::1771859889::0::1::::<><><>0<>0<><>::
 ::res://Scenes/LevelBase/::1772632901
