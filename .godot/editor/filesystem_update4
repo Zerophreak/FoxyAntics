@@ -8,3 +8,5 @@ res://Globals/SignalHub.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
 res://Scenes/Enemies/EnemyBase/EnemyBase.cs
+res://Scenes/Enemies/Snail/Snail.cs
+res://Scenes/Enemies/Snail/Snail.tscn
