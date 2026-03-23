@@ -4,7 +4,7 @@ using System;
 public partial class EnemyBase : CharacterBody2D
 {
 	[Export] private VisibleOnScreenNotifier2D _screenNotifier;
-	[Export] private AnimatedSprite2D _animatedSprite2D;
+	[Export] protected AnimatedSprite2D _animatedSprite2D;
 	[Export] private HitBox _hitBox;
 	
 	[Export] protected float _speed = 30.0f;

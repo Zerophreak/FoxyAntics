@@ -7,9 +7,10 @@
 radius = 9.0
 height = 32.0
 
-[node name="Snail" unique_id=740995919 instance=ExtResource("1_tgnkg")]
+[node name="Snail" unique_id=740995919 node_paths=PackedStringArray("_floorDetect") instance=ExtResource("1_tgnkg")]
 collision_mask = 17
 script = ExtResource("2_8m2hh")
+_floorDetect = NodePath("FloorDetect")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]
 animation = &"snail"
@@ -25,3 +26,7 @@ position = Vector2(1, 0)
 
 [node name="HitBox" parent="." index="3" unique_id=1063813255]
 position = Vector2(0, 3)
+
+[node name="FloorDetect" type="RayCast2D" parent="." index="4" unique_id=1623536834]
+position = Vector2(-20, 0)
+target_position = Vector2(0, 30)
