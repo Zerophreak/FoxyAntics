@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773752836
+::res://::1774248574
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -37,7 +37,7 @@ boss_bunny.png::CompressedTexture2D::8018570906771627649::1771857454::1771858477
 eagle-attack.png::CompressedTexture2D::3422103122073937291::1771857454::1771858477::1::::<><><>0<>0<>6fb7330a5e1cebc5b81e9e69648e741b<>res://.godot/imported/eagle-attack.png-e01665b27f5196522a46e91b080dbfb5.ctex::
 ::res://Assets/enemies/frog/::1771858477
 frog_sheet.png::CompressedTexture2D::5064415715259577869::1771857454::1771858477::1::::<><><>0<>0<>6b15fd5f4ea0e28595255470b92e7393<>res://.godot/imported/frog_sheet.png-91853621b39fd27a706125f26efef7c5.ctex::
-::res://Assets/enemies/snail/::1771858477
+::res://Assets/enemies/snail/::1773755147
 snail.png::CompressedTexture2D::6850421734971151897::1771857454::1771858477::1::::<><><>0<>0<>13ba7fce6e0ce74940270ec8d4a7ec83<>res://.godot/imported/snail.png-27b769a78e05bb0a0d358839079cb93f.ctex::
 ::res://Assets/explosion/::1771858477
 enemy-deadth.png::CompressedTexture2D::4852770297974508067::1771857454::1771858477::1::::<><><>0<>0<>8b38e06ab4fca7c306a0422404d8f615<>res://.godot/imported/enemy-deadth.png-f420b2792a4cacd2ff20f7fe69ef9034.ctex::
@@ -91,15 +91,16 @@ LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>
 ::res://Scenes/::1771859465
 ::res://Scenes/Enemies/::1773754860
 ::res://Scenes/Enemies/Eagle/::1773754860
-::res://Scenes/Enemies/EnemyBase/::1773754976
-EnemyBase.tscn::PackedScene::6322101859871324996::1773754976::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://bygy53l2pqvqj::::res://Scenes/Enemies/EnemyBase/EnemyBase.cs<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
-EnemyBase.cs::CSharpScript::4084851468067886733::1773754893::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/Enemies/EnemyBase/::1774274406
+EnemyBase.cs::CSharpScript::4084851468067886733::1774274685::0::1::::<>CharacterBody2D<><>0<>0<><>::
+EnemyBase.tscn::PackedScene::6322101859871324996::1774274406::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://bygy53l2pqvqj::::res://Scenes/Enemies/EnemyBase/EnemyBase.cs<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
 ::res://Scenes/Enemies/Frog/::1773754849
-::res://Scenes/Enemies/Snail/::1773754838
-Snail.tscn::PackedScene::4930532396095307727::1773755077::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn
+::res://Scenes/Enemies/Snail/::1773755857
+Snail.cs::CSharpScript::6333843767935642362::1773755710::0::1::::<><><>0<>0<><>::
+Snail.tscn::PackedScene::4930532396095307727::1774274754::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn<>uid://cwifqmt1a32qo::::res://Scenes/Enemies/Snail/Snail.cs
 ::res://Scenes/HitBox/::1773753772
-Hitbox.tscn::PackedScene::5770442110239843659::1773753772::0::1::::<><><>0<>0<><>::uid://d34rl4qc6lquv::::res://Scenes/HitBox/Hitbox.cs
 Hitbox.cs::CSharpScript::9185470008448700805::1773754629::0::1::::<>Area2D<><>0<>1<><>::
+Hitbox.tscn::PackedScene::5770442110239843659::1774274769::0::1::::<><><>0<>0<><>::uid://d34rl4qc6lquv::::res://Scenes/HitBox/Hitbox.cs
 ::res://Scenes/LevelBase/::1772632901
 LevelBase.cs::CSharpScript::1153667071511381746::1771857454::0::1::::<>Node<><>0<>0<><>::
 LevelBase.tscn::PackedScene::3450573458406995423::1772632901::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://assets/tiles/Terrain (16x16).png<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn

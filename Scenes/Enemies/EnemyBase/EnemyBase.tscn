@@ -177,7 +177,8 @@ animations = [{
 }]
 
 [node name="EnemyBase" type="CharacterBody2D" unique_id=740995919]
-collision_layer = 0
+collision_layer = 2
+collision_mask = 16
 script = ExtResource("1_oiin3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471655247]
@@ -188,4 +189,4 @@ animation = &"frog_jump"
 
 [node name="VisibleOnScreen" type="VisibleOnScreenNotifier2D" parent="." unique_id=1476573856]
 
-[node name="Hitbox" parent="." unique_id=1063813255 instance=ExtResource("4_svwg3")]
+[node name="HitBox" parent="." unique_id=1063813255 instance=ExtResource("4_svwg3")]

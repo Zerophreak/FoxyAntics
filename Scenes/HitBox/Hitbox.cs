@@ -21,6 +21,7 @@ public partial class Hitbox : Area2D
 			}
 		}
 	}
+	
 	[Export] private CollisionShape2D _collisionShape2D;
 
 
