@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel;
 
 [Tool]
-public partial class Hitbox : Area2D
+public partial class HitBox : Area2D
 { 
 	[Export] public Shape2D Shape
 	{
@@ -23,7 +23,6 @@ public partial class Hitbox : Area2D
 	}
 	
 	[Export] private CollisionShape2D _collisionShape2D;
-
 
 	private Shape2D _shape;
 

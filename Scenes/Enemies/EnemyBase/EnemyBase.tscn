@@ -176,16 +176,19 @@ animations = [{
 "speed": 14.0
 }]
 
-[node name="EnemyBase" type="CharacterBody2D" unique_id=740995919]
+[node name="EnemyBase" type="CharacterBody2D" unique_id=740995919 node_paths=PackedStringArray("_screenNotifier", "_animatedSprite2D", "_hitBox")]
 collision_layer = 2
 collision_mask = 16
 script = ExtResource("1_oiin3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471655247]
+_screenNotifier = NodePath("VisibleOnScreen")
+_animatedSprite2D = NodePath("AnimatedSprite2D")
+_hitBox = NodePath("HitBox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1344600626]
 sprite_frames = SubResource("SpriteFrames_f51v7")
 animation = &"frog_jump"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471655247]
 
 [node name="VisibleOnScreen" type="VisibleOnScreenNotifier2D" parent="." unique_id=1476573856]
 
