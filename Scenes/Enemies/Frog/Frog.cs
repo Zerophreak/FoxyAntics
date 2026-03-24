@@ -14,5 +14,6 @@ public partial class Frog : EnemyBase
 		Vector2 velocity = ApplyGravity(delta);
 		Velocity = velocity;
 		MoveAndSlide();
+		FlipMe();
 	}
 }

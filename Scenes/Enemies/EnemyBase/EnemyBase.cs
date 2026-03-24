@@ -46,4 +46,9 @@ public partial class EnemyBase : CharacterBody2D
 		velocity.Y += _gravity * (float)delta;
 		return velocity;
 	}
+
+	protected virtual void FlipMe()
+	{
+		_animatedSprite2D.FlipH = _playerRef.GlobalPosition.X > GlobalPosition.X;
+	}
 }

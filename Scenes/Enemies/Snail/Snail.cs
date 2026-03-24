@@ -19,7 +19,7 @@ public partial class Snail : EnemyBase
 		FlipMe();
 	}
 
-	private void FlipMe()
+	protected override void FlipMe()
 	{
 		if(!_floorDetect.IsColliding() || IsOnWall())
 		{
