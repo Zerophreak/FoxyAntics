@@ -10,3 +10,4 @@ res://Scenes/Main/Main.cs
 res://Globals/SignalHub.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
+res://Classes/GameConstants.cs
