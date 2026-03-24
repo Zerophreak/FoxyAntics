@@ -8,6 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qthob"]
 
 [node name="Frog" unique_id=740995919 instance=ExtResource("1_wocr3")]
+collision_mask = 17
 script = ExtResource("2_qthob")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]

@@ -26,6 +26,10 @@ public partial class Player : CharacterBody2D
 		}
     }
 
+	public override void _EnterTree()
+	{
+		AddToGroup(GameConstants.GROUP_PLAYER);
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
