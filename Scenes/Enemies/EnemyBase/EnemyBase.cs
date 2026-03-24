@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Security;
+using System.Threading.Tasks.Dataflow;
 
 public partial class EnemyBase : CharacterBody2D
 {
@@ -11,9 +13,18 @@ public partial class EnemyBase : CharacterBody2D
 	[Export] protected float _fallenOffY = 200.0f;
 
 	protected float _gravity = 800.0f;
+	protected Player _playerRef; 
+
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_playerRef = GetTree().GetFirstNodeInGroup(GameConstants.GROUP_PLAYER) as Player;
+		if(_playerRef == null)
+		{
+			GD.PrintErr("No Player ref");
+			QueueFree();
+		}
 	}
 
 	public override void _Process(double delta)
