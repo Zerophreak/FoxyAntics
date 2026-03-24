@@ -31,7 +31,7 @@ public partial class EnemyBase : CharacterBody2D
 
 	protected Vector2 ApplyGravity(double delta)
 	{
-		Vector2 velocity = velocity;
+		Vector2 velocity = Velocity;
 		velocity.Y += _gravity * (float)delta;
 		return velocity;
 	}
