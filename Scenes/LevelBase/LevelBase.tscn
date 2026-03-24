@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cv8q48ridr1ob" path="res://Assets/tiles/Terrain (16x16).png" id="2_bgw71"]
 [ext_resource type="PackedScene" uid="uid://dqecyqfebayce" path="res://Scenes/Player/Player.tscn" id="3_78m1b"]
 [ext_resource type="PackedScene" uid="uid://cnkvpo1ajktw0" path="res://Scenes/Enemies/Snail/Snail.tscn" id="4_3lxj6"]
+[ext_resource type="PackedScene" uid="uid://clb12lib5rv24" path="res://Scenes/Enemies/Frog/Frog.tscn" id="5_lmtt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78m1b"]
 texture = ExtResource("2_bgw71")
@@ -255,3 +256,6 @@ position = Vector2(531, -19)
 
 [node name="Snail" parent="Enemies" unique_id=740995919 instance=ExtResource("4_3lxj6")]
 position = Vector2(694, -14)
+
+[node name="Frog" parent="Enemies" unique_id=1118051765 instance=ExtResource("5_lmtt4")]
+position = Vector2(404, -10)
