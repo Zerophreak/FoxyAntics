@@ -258,4 +258,4 @@ position = Vector2(531, -19)
 position = Vector2(694, -14)
 
 [node name="Frog" parent="Enemies" unique_id=1118051765 instance=ExtResource("5_lmtt4")]
-position = Vector2(361, -11)
+position = Vector2(413, -66)
