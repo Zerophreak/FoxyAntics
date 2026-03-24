@@ -16,16 +16,23 @@ public partial class EnemyBase : CharacterBody2D
 	{
 	}
 
-	public override void _Process(douyble delta)
+	public override void _Process(double delta)
 	{
 		FallenOff();
 	}
 
-	private FallenOff()
+	private void FallenOff()
 	{
-		if(GlobalPosition.Y >_fallenOffY)
+		if(GlobalPosition.Y > _fallenOffY)
 		{
 			CallDeferred(MethodName.QueueFree);
 		}
+	}
+
+	protected Vector2 ApplyGravity(double delta)
+	{
+		Vector2 velocity = velocity;
+		velocity.Y += _gravity * (float)delta;
+		return velocity;
 	}
 }

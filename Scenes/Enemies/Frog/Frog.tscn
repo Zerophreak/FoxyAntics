@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://clb12lib5rv24"]
 
 [ext_resource type="PackedScene" uid="uid://cwcqdgvcb3j6s" path="res://Scenes/Enemies/EnemyBase/EnemyBase.tscn" id="1_wocr3"]
+[ext_resource type="Script" uid="uid://dws8jas47b004" path="res://Scenes/Enemies/Frog/Frog.cs" id="2_qthob"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wocr3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qthob"]
 
 [node name="Frog" unique_id=740995919 instance=ExtResource("1_wocr3")]
+script = ExtResource("2_qthob")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]
 animation = &"frog_idle"

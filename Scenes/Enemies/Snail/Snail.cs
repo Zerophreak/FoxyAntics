@@ -7,9 +7,8 @@ public partial class Snail : EnemyBase
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
-		velocity.Y += _gravity * (float)delta;
-
+		Vector2 velocity = ApplyGravity(delta);
+		
 		if(IsOnFloor())
 		{
 			velocity.X = _animatedSprite2D.FlipH ? _speed : -_speed;

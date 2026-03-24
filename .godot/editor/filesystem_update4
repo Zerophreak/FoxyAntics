@@ -1,2 +1,5 @@
 res://Scenes/Enemies/Frog/Frog.tscn
 res://Scenes/LevelBase/LevelBase.tscn
+res://Scenes/Enemies/EnemyBase/EnemyBase.cs
+res://Scenes/Enemies/Frog/Frog.cs
+res://Scenes/Enemies/Snail/Snail.cs
