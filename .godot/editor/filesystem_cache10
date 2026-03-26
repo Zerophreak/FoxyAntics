@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774347776
+::res://::1774514654
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -79,8 +79,8 @@ blue_button00.png::CompressedTexture2D::6892565702720035373::1771857454::1771858
 green_button00.png::CompressedTexture2D::1486955082549791731::1771857454::1771858474::1::::<><><>0<>0<>76868784fbb543ca17faebed920cf0c0<>res://.godot/imported/green_button00.png-c57a0826bdf0121174de94413faaab01.ctex::
 level_select_frame_128.png::CompressedTexture2D::711059953844961301::1771857454::1771858474::1::::<><><>0<>0<>54b69bb5976a3b71eb8d41b358c45732<>res://.godot/imported/level_select_frame_128.png-5c01b4d10f2b277955f1ea14bed419b4.ctex::
 yellow_button00.png::CompressedTexture2D::2829953751731713772::1771857454::1771858474::1::::<><><>0<>0<>d7e057b68a0e1fb7df3fd33dd53458a0<>res://.godot/imported/yellow_button00.png-b701024c8d159123b3b20c749088b93b.ctex::
-::res://Classes/::1774347835
-GameConstans.cs::CSharpScript::586223385834135203::1774347835::0::1::::<><><>0<>0<><>::
+::res://Classes/::1774347887
+GameConstants.cs::CSharpScript::586223385834135203::1774348235::0::1::::<><><>0<>0<><>::
 ::res://Globals/::1771857454
 GameManager.cs::CSharpScript::6468328429381770713::1771857454::0::1::::<>Node<><>0<>0<><>::
 ScoreManager.cs::CSharpScript::7971972130546852175::1771857454::0::1::::<>Node<><>0<>0<><>::
@@ -94,25 +94,25 @@ LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>
 ::res://Scenes/Enemies/::1773754860
 ::res://Scenes/Enemies/Eagle/::1773754860
 ::res://Scenes/Enemies/EnemyBase/::1774276955
-EnemyBase.cs::CSharpScript::4084851468067886733::1774347205::0::1::::<>CharacterBody2D<><>0<>0<><>::
+EnemyBase.cs::CSharpScript::4084851468067886733::1774349425::0::1::::<>CharacterBody2D<><>0<>0<><>::
 EnemyBase.tscn::PackedScene::6322101859871324996::1774276955::0::1::::<><><>0<>0<><>::uid://bo0xskpbqo668::::res://Assets/enemies/eagle/eagle-attack.png<>uid://bygy53l2pqvqj::::res://Scenes/Enemies/EnemyBase/EnemyBase.cs<>uid://cefigmckp46wn::::res://Assets/enemies/frog/frog_sheet.png<>uid://c4unpes3kvoxl::::res://Assets/enemies/snail/snail.png<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn
-::res://Scenes/Enemies/Frog/::1774347637
-Frog.tscn::PackedScene::5548610473607484175::1774347637::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn<>uid://dws8jas47b004::::res://Scenes/Enemies/Frog/Frog.cs
-Frog.cs::CSharpScript::8742595172762467579::1774346577::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/Enemies/Frog/::1774351595
+Frog.cs::CSharpScript::8742595172762467579::1774349655::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Frog.tscn::PackedScene::5548610473607484175::1774351595::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn<>uid://dws8jas47b004::::res://Scenes/Enemies/Frog/Frog.cs
 ::res://Scenes/Enemies/Snail/::1774279343
-Snail.cs::CSharpScript::6333843767935642362::1774346645::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Snail.cs::CSharpScript::6333843767935642362::1774349428::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Snail.tscn::PackedScene::5707242731482149681::1774279343::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn<>uid://cwifqmt1a32qo::::res://Scenes/Enemies/Snail/Snail.cs
 ::res://Scenes/HitBox/::1774274773
 HitBox.cs::CSharpScript::9185470008448700805::1774276457::0::1::::<>Area2D<><>0<>1<><>::
 Hitbox.tscn::PackedScene::5770442110239843659::1774274773::0::1::::<><><>0<>0<><>::uid://d34rl4qc6lquv::::res://Scenes/HitBox/HitBox.cs
-::res://Scenes/LevelBase/::1774347155
+::res://Scenes/LevelBase/::1774349699
 LevelBase.cs::CSharpScript::1153667071511381746::1771857454::0::1::::<>Node<><>0<>0<><>::
-LevelBase.tscn::PackedScene::3450573458406995423::1774347155::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn
+LevelBase.tscn::PackedScene::3450573458406995423::1774349699::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn
 ::res://Scenes/Main/::1771857454
 Main.cs::CSharpScript::2117359185024073803::1771857454::0::1::::<>Control<><>0<>0<><>::
 Main.tscn::PackedScene::7322088427511776818::1771857454::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://assets/sound/Farm Frolics.ogg<>uid://bg0t5xmaeaogu::::res://assets/fonts/LuckiestGuy-Regular.ttf
 ::res://Scenes/Player/::1773310648
-Player.cs::CSharpScript::7777292425589243284::1773310272::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.cs::CSharpScript::7777292425589243284::1774348194::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Player.tscn::PackedScene::8290706201624041080::1773310648::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://qgtu5ev8dmbp::::res://Assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://c82jcfga5jbed::::res://Assets/sound/jump.wav
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::
