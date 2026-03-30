@@ -176,13 +176,14 @@ animations = [{
 "speed": 14.0
 }]
 
-[node name="EnemyBase" type="CharacterBody2D" unique_id=740995919 node_paths=PackedStringArray("_screenNotifier", "_animatedSprite2D", "_hitBox")]
+[node name="EnemyBase" type="CharacterBody2D" unique_id=740995919 node_paths=PackedStringArray("_screenNotifier", "_animatedSprite2D", "_hitBox", "_timer")]
 collision_layer = 2
 collision_mask = 16
 script = ExtResource("1_oiin3")
 _screenNotifier = NodePath("VisibleOnScreen")
 _animatedSprite2D = NodePath("AnimatedSprite2D")
 _hitBox = NodePath("HitBox")
+_timer = NodePath("Timer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1344600626]
 sprite_frames = SubResource("SpriteFrames_f51v7")

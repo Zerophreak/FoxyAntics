@@ -8,7 +8,8 @@ public partial class EnemyBase : CharacterBody2D
 	[Export] private VisibleOnScreenNotifier2D _screenNotifier;
 	[Export] protected AnimatedSprite2D _animatedSprite2D;
 	[Export] private HitBox _hitBox;
-	
+	[Export] protected Timer _timer;
+
 	[Export] protected float _speed = 30.0f;
 	[Export] protected float _fallenOffY = 200.0f;
 
@@ -25,7 +26,23 @@ public partial class EnemyBase : CharacterBody2D
 			GD.PrintErr("No Player ref");
 			QueueFree();
 		}
+
+		_screenNotifier.ScreenEntered += OnScreenEntered; 
+		_timer.Timeout += OnTimeout;
 	}
+	
+	private void OnScreenEntered()
+	{
+		GD.Print("OnScreenEntered");
+		_timer.Start();
+		_screenNotifier.ScreenEntered -= OnScreenEntered;
+	}
+
+	protected virtual void OnTimeout()
+	{
+		//added to frog.cs as override
+	}
+
 
 	public override void _Process(double delta)
 	{

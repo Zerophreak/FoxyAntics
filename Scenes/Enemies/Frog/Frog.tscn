@@ -12,7 +12,6 @@ collision_mask = 17
 script = ExtResource("2_qthob")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]
-animation = &"frog_idle"
 autoplay = "frog_idle"
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1471655247]
