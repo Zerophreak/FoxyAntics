@@ -193,3 +193,6 @@ animation = &"frog_jump"
 [node name="VisibleOnScreen" type="VisibleOnScreenNotifier2D" parent="." unique_id=1476573856]
 
 [node name="HitBox" parent="." unique_id=1063813255 instance=ExtResource("4_svwg3")]
+
+[node name="Timer" type="Timer" parent="." unique_id=387535248]
+wait_time = 3.0
