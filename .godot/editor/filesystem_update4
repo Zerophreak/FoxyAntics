@@ -15,3 +15,5 @@ res://Scenes/Enemies/Frog/Frog.tscn
 res://Scenes/LevelBase/LevelBase.tscn
 res://Scenes/Enemies/Snail/Snail.tscn
 res://Scenes/Player/Player.tscn
+res://Scenes/Objects/BulletBase/BulletBase.tscn
+res://Scenes/Objects/BulletBase/BulletBase.cs
