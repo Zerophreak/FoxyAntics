@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://clb12lib5rv24" path="res://Scenes/Enemies/Frog/Frog.tscn" id="5_lmtt4"]
 [ext_resource type="PackedScene" uid="uid://dvsvg1targ8xm" path="res://Scenes/Enemies/Eagle/Eagle.tscn" id="6_ooqsx"]
 [ext_resource type="PackedScene" uid="uid://dsy3cloos1ou4" path="res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn" id="7_txgif"]
+[ext_resource type="PackedScene" uid="uid://j84i5hbcgoq8" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn" id="8_o536s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78m1b"]
 texture = ExtResource("2_bgw71")
@@ -267,3 +268,5 @@ position = Vector2(478, -102)
 position = Vector2(630, -167)
 
 [node name="Bullets" type="Node" parent="." unique_id=1765450794]
+
+[node name="ObjectMaker" parent="." unique_id=1940432932 instance=ExtResource("8_o536s")]

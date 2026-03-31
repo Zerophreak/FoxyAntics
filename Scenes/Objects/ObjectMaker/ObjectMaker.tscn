@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://j84i5hbcgoq8"]
 
+[ext_resource type="Script" uid="uid://dg6s57pleusma" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.cs" id="1_v72af"]
+
 [node name="ObjectMaker" type="Node" unique_id=1940432932]
+script = ExtResource("1_v72af")

@@ -12,9 +12,7 @@ public partial class LevelBase : Node
 		}
 		if (@event.IsActionPressed("test"))
 		{
-			BulletBase bullet = _bulletScene.Instantiate<BulletBase>();
-			bullet.Setup(new Vector2(150, -50), new Vector2(1,1), 50.0f);
-			AddChild(bullet);
+			SignalHub.EmitOnCreateBullet(new Vector2(150, -50), new Vector2(1, 1), 50.0f, _bulletScene);
 		}
 	}
 }

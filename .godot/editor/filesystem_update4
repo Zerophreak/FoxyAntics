@@ -22,3 +22,5 @@ res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn
 res://Scenes/Objects/Shooter/LifeTime.tscn
 res://Scenes/Objects/Shooter/LifeTime/LifeTime.cs
 res://Scenes/Objects/Shooter/LifeTime/LifeTime.tscn
+res://Scenes/Objects/ObjectMaker/ObjectMaker.cs
+res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn
