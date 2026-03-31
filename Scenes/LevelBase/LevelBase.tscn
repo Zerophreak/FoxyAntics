@@ -267,6 +267,4 @@ position = Vector2(478, -102)
 [node name="Eagle" parent="Enemies" unique_id=1966561809 instance=ExtResource("6_ooqsx")]
 position = Vector2(630, -167)
 
-[node name="Bullets" type="Node" parent="." unique_id=1765450794]
-
 [node name="ObjectMaker" parent="." unique_id=1940432932 instance=ExtResource("8_o536s")]
