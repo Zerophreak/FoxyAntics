@@ -17,3 +17,8 @@ res://Scenes/Enemies/Snail/Snail.tscn
 res://Scenes/Player/Player.tscn
 res://Scenes/Objects/BulletBase/BulletBase.tscn
 res://Scenes/Objects/BulletBase/BulletBase.cs
+res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn
+res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn
+res://Scenes/Objects/Shooter/LifeTime.tscn
+res://Scenes/Objects/Shooter/LifeTime/LifeTime.cs
+res://Scenes/Objects/Shooter/LifeTime/LifeTime.tscn

@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://cupod72lhsg7a"]
 
+[ext_resource type="Script" uid="uid://cbxstnkx0ul15" path="res://Scenes/Objects/BulletBase/BulletBase.cs" id="1_5qdqq"]
+[ext_resource type="PackedScene" uid="uid://bsydbhgoevaf3" path="res://Scenes/Objects/Shooter/LifeTime/LifeTime.tscn" id="2_s2456"]
+
 [node name="BulletBase" type="Area2D" unique_id=660919599]
+script = ExtResource("1_5qdqq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1683426726]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=456087790]
+
+[node name="LifeTime" parent="." unique_id=1695306067 instance=ExtResource("2_s2456")]
+_waitTime = 1.0

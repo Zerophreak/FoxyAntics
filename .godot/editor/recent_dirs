@@ -1,3 +1,6 @@
+res://Scenes/Objects/BulletBase/
+res://Scenes/Objects/EnemyBullet/
+res://Scenes/Objects/PlayerBullet/
 res://Scenes/Enemies/Eagle/
 res://Scenes/Enemies/EnemyBase/
 res://Scenes/Enemies/Frog/
