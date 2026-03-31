@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qgtu5ev8dmbp" path="res://Assets/player/player.png" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://c5dbi2mxgf10f" path="res://Scenes/PlayerCam/PlayerCam.tscn" id="2_ft8w5"]
 [ext_resource type="AudioStream" uid="uid://c82jcfga5jbed" path="res://Assets/sound/jump.wav" id="4_ude3g"]
+[ext_resource type="PackedScene" uid="uid://cohilrj0xwffn" path="res://Scenes/HitBox/Hitbox.tscn" id="5_jmcll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 7.0
@@ -195,6 +196,10 @@ states/hurt/position = Vector2(494, 206.30545)
 transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083"), "Grounded", "Air", SubResource("AnimationNodeStateMachineTransition_esmjy"), "Air", "Grounded", SubResource("AnimationNodeStateMachineTransition_6tu5v")]
 graph_offset = Vector2(0, 18.30544)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4wape"]
+radius = 5.8
+height = 22.65
+
 [node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
 collision_layer = 0
 script = ExtResource("1_h54ih")
@@ -230,3 +235,9 @@ autoplay = &"idle"
 tree_root = SubResource("AnimationNodeStateMachine_0kmp4")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="HitBox" parent="." unique_id=1063813255 instance=ExtResource("5_jmcll")]
+position = Vector2(0, 5)
+collision_layer = 4
+collision_mask = 10
+Shape = SubResource("CapsuleShape2D_4wape")

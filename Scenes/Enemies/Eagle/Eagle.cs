@@ -3,13 +3,9 @@ using System;
 
 public partial class Eagle : EnemyBase
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    protected override void OnScreenEntered()
+    {
+        base.OnScreenEntered();
+		_animatedSprite2D.Play("eagle");
+    }
 }

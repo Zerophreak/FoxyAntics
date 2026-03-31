@@ -8,14 +8,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qthob"]
 
 [node name="Frog" unique_id=740995919 instance=ExtResource("1_wocr3")]
+collision_layer = 2
 collision_mask = 17
 script = ExtResource("2_qthob")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]
+animation = &"frog_idle"
 autoplay = "frog_idle"
+frame = 3
+frame_progress = 0.5896681
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1471655247]
 shape = SubResource("CircleShape2D_wocr3")
 
 [node name="HitBox" parent="." index="3" unique_id=1063813255]
+collision_layer = 2
+collision_mask = 16
 Shape = SubResource("RectangleShape2D_qthob")

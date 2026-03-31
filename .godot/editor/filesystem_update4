@@ -11,3 +11,7 @@ res://Scenes/Main/Main.cs
 res://Globals/SignalHub.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
+res://Scenes/Enemies/Frog/Frog.tscn
+res://Scenes/LevelBase/LevelBase.tscn
+res://Scenes/Enemies/Snail/Snail.tscn
+res://Scenes/Player/Player.tscn
