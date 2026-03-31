@@ -31,7 +31,7 @@ public partial class EnemyBase : CharacterBody2D
 		_timer.Timeout += OnTimeout;
 	}
 	
-	private void OnScreenEntered()
+	protected virtual void OnScreenEntered()
 	{
 		GD.Print("OnScreenEntered");
 		_timer.Start();
