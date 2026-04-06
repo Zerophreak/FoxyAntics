@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://iafhp6aswaa1"]
 
 [ext_resource type="Script" uid="uid://bkgrta1r4e274" path="res://Scenes/Objects/Shooter/Shooter.cs" id="1_x2di6"]
-[ext_resource type="PackedScene" uid="uid://dqq1u8mtxumw3" path="res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn" id="2_woui0"]
+[ext_resource type="PackedScene" uid="uid://cupod72lhsg7a" path="res://Scenes/Objects/BulletBase/BulletBase.tscn" id="2_woui0"]
 [ext_resource type="AudioStream" uid="uid://bl04mpl170nsw" path="res://Assets/sound/laser.wav" id="3_p4yuv"]
 
 [node name="Shooter" type="Node2D" unique_id=1877070957 node_paths=PackedStringArray("_sound", "_shootTimer")]

@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cwcqdgvcb3j6s" path="res://Scenes/Enemies/EnemyBase/EnemyBase.tscn" id="1_euo1a"]
 [ext_resource type="Script" uid="uid://cvhpjffwrw5ou" path="res://Scenes/Enemies/Eagle/Eagle.cs" id="2_8eptn"]
+[ext_resource type="PackedScene" uid="uid://iafhp6aswaa1" path="res://Scenes/Objects/Shooter/Shooter.tscn" id="3_luig0"]
+[ext_resource type="PackedScene" uid="uid://dqq1u8mtxumw3" path="res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn" id="4_f4258"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_euo1a"]
 radius = 13.0
@@ -32,3 +34,7 @@ target_position = Vector2(0, 150)
 collision_mask = 4
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="Shooter" parent="." index="6" unique_id=1877070957 instance=ExtResource("3_luig0")]
+_bulletScene = ExtResource("4_f4258")
+_speed = 150.0
