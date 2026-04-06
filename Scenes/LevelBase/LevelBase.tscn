@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://qo3y0x3gj0qg" path="res://Scenes/LevelBase/LevelBase.cs" id="1_5ufo3"]
 [ext_resource type="Texture2D" uid="uid://cv8q48ridr1ob" path="res://Assets/tiles/Terrain (16x16).png" id="2_bgw71"]
+[ext_resource type="PackedScene" uid="uid://dqq1u8mtxumw3" path="res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn" id="2_dufl6"]
 [ext_resource type="PackedScene" uid="uid://dqecyqfebayce" path="res://Scenes/Player/Player.tscn" id="3_78m1b"]
 [ext_resource type="PackedScene" uid="uid://cnkvpo1ajktw0" path="res://Scenes/Enemies/Snail/Snail.tscn" id="4_3lxj6"]
 [ext_resource type="PackedScene" uid="uid://clb12lib5rv24" path="res://Scenes/Enemies/Frog/Frog.tscn" id="5_lmtt4"]
 [ext_resource type="PackedScene" uid="uid://dvsvg1targ8xm" path="res://Scenes/Enemies/Eagle/Eagle.tscn" id="6_ooqsx"]
-[ext_resource type="PackedScene" uid="uid://dsy3cloos1ou4" path="res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn" id="7_txgif"]
 [ext_resource type="PackedScene" uid="uid://j84i5hbcgoq8" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn" id="8_o536s"]
 [ext_resource type="PackedScene" uid="uid://iafhp6aswaa1" path="res://Scenes/Objects/Shooter/Shooter.tscn" id="9_dufl6"]
 
@@ -248,7 +248,7 @@ sources/0 = SubResource("TileSetAtlasSource_78m1b")
 
 [node name="LevelBase" type="Node" unique_id=1432951507 node_paths=PackedStringArray("_shooter")]
 script = ExtResource("1_5ufo3")
-_bulletScene = ExtResource("7_txgif")
+_bulletScene = ExtResource("2_dufl6")
 _shooter = NodePath("Shooter")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2013404067]
