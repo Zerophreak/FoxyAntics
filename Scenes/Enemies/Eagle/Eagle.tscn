@@ -9,9 +9,11 @@
 radius = 13.0
 height = 32.0
 
-[node name="Eagle" unique_id=740995919 instance=ExtResource("1_euo1a")]
+[node name="Eagle" unique_id=740995919 node_paths=PackedStringArray("_shooter", "_playerDetect") instance=ExtResource("1_euo1a")]
 collision_layer = 6
 script = ExtResource("2_8eptn")
+_shooter = NodePath("Shooter")
+_playerDetect = NodePath("RayCast2D")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1344600626]
 animation = &"eagle"

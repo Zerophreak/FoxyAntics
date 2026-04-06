@@ -202,12 +202,13 @@ graph_offset = Vector2(0, 18.30544)
 radius = 5.8
 height = 22.65
 
-[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite", "_shooter")]
 collision_layer = 0
 script = ExtResource("1_h54ih")
 _debugLabel = NodePath("DebugLabel")
 _jumpSound = NodePath("JumpSound")
 _sprite = NodePath("Sprite2D")
+_shooter = NodePath("Shooter")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814302173]
 texture = ExtResource("1_s0eop")
@@ -246,4 +247,4 @@ Shape = SubResource("CapsuleShape2D_4wape")
 
 [node name="Shooter" parent="." unique_id=1877070957 instance=ExtResource("6_t26db")]
 _bulletScene = ExtResource("7_fk5o5")
-_speed = 100.0
+_speed = 120.0
