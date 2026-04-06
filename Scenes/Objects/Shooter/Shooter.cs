@@ -15,10 +15,7 @@ public partial class Shooter : Node2D
 	public override void _Ready()
 	{
 		_shootTimer.Timeout += OnShootTimerTimeout;
-	}
-
-	private void OnShootTimerTimeout()
-	{
+		_shootTimer.WaitTime = _shootDelay;
 	}
 
 	public void Shoot(Vector2 direction)
@@ -26,6 +23,12 @@ public partial class Shooter : Node2D
 		if(!_canShoot) return;
 		_canShoot = false;
 
-		SignalHub.EmitOnCreateBullet(GlobalPosition);
+		SignalHub.EmitOnCreateBullet(GlobalPosition, direction, _speed, _bulletScene);
+		_sound.Play();
+	}
+
+	private void OnShootTimerTimeout()
+	{
+		_canShoot = true;
 	}
 }
