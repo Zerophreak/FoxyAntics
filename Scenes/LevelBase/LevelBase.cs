@@ -15,7 +15,7 @@ public partial class LevelBase : Node
 		if (@event.IsActionPressed("test"))
 		{
 			//SignalHub.EmitOnCreateBullet(new Vector2(150, -50), new Vector2(1, 1), 50.0f, _bulletScene);
-			_shooter.Shoot(New Vector2(1.1));
+			_shooter.Shoot(new Vector2(1,1));
 		}
 	}
 }

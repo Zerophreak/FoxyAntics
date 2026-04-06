@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://iafhp6aswaa1"]
 
 [ext_resource type="Script" uid="uid://bkgrta1r4e274" path="res://Scenes/Objects/Shooter/Shooter.cs" id="1_x2di6"]
+[ext_resource type="PackedScene" uid="uid://dsy3cloos1ou4" path="res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn" id="2_woui0"]
+[ext_resource type="AudioStream" uid="uid://bl04mpl170nsw" path="res://Assets/sound/laser.wav" id="3_p4yuv"]
 
-[node name="Shooter" type="Node2D" unique_id=1877070957]
+[node name="Shooter" type="Node2D" unique_id=1877070957 node_paths=PackedStringArray("_sound", "_shootTimer")]
 script = ExtResource("1_x2di6")
+_bulletScene = ExtResource("2_woui0")
+_sound = NodePath("Sound")
+_shootTimer = NodePath("ShootTimer")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1215805306]
 autostart = true
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1289267822]
+stream = ExtResource("3_p4yuv")
