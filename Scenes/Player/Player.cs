@@ -15,6 +15,7 @@ public partial class Player : CharacterBody2D
 	[Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
 	[Export] private Sprite2D _sprite;
+	[Export] private Shooter _shooter
 
 	private bool _jumped = false;
 
@@ -23,6 +24,12 @@ public partial class Player : CharacterBody2D
         if(@event.IsActionPressed("jump"))
 		{
 			_jumped = true;
+		}
+
+		 if(@event.IsActionPressed("shoot"))
+		{
+			Vector2 direction = _sprite.FlipH ? Vector2.Left : Vector2.Right;
+			_shooter.Shoot(direction);
 		}
     }
 
