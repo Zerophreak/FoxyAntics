@@ -6,5 +6,6 @@
 script = ExtResource("1_x2di6")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1215805306]
+autostart = true
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1289267822]

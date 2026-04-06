@@ -3,13 +3,29 @@ using System;
 
 public partial class Shooter : Node2D
 {
-	// Called when the node enters the scene tree for the first time.
+	[Export] private PackedScene _bulletScene;
+	[Export] private AudioStreamPlayer2D _sound;
+	[Export] private Timer _shootTimer;
+	[Export] private float _speed = 50.0f;
+	[Export] private float _shootDelay = 0.7f;
+
+	private bool _canShoot = true;
+
+
 	public override void _Ready()
+	{
+		_shootTimer.Timeout += OnShootTimerTimeout;
+	}
+
+	private void OnShootTimerTimeout()
 	{
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public void Shoot(Vector2 direction)
 	{
+		if(!_canShoot) return;
+		_canShoot = false;
+
+		SignalHub.EmitOnCreateBullet(GlobalPosition);
 	}
 }
