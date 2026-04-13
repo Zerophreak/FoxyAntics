@@ -11,7 +11,6 @@ public partial class ObjectMaker : Node
 		SignalHub.Instance.OnCreateExplosion += OnCreateExplosion;
 	}
 
-    
     private void AddObject(Node node)
 	{
 		AddChild(node);
