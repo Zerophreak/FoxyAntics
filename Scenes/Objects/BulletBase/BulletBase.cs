@@ -9,10 +9,16 @@ public partial class BulletBase : Area2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		AreaEntered += OnAreaEntered;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _PhysicsProcess(double delta)
+    private void OnAreaEntered(Area2D area)
+    {
+        QueueFree();
+    }
+
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _PhysicsProcess(double delta)
 	{
 		GlobalPosition += _direction * (float)delta;
 	}

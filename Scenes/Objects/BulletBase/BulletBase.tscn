@@ -11,4 +11,4 @@ script = ExtResource("1_5qdqq")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=456087790]
 
 [node name="LifeTime" parent="." unique_id=1695306067 instance=ExtResource("2_s2456")]
-_waitTime = 1.0
+_waitTime = 10.0
