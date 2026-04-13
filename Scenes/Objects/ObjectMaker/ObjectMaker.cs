@@ -4,13 +4,15 @@ using System.IO.Pipes;
 
 public partial class ObjectMaker : Node
 {
-    private PackedScene _explosionScene = GD.Load<PackedScene>("");
+    [Export] private PackedScene _explosionScene;
     public override void _Ready()
     {
 		SignalHub.Instance.OnCreateBullet += OnCreateBullet;
+		SignalHub.Instance.OnCreateExplosion += OnCreateExplosion;
 	}
 
-	private void AddObject(Node node)
+    
+    private void AddObject(Node node)
 	{
 		AddChild(node);
 	}
@@ -21,4 +23,12 @@ public partial class ObjectMaker : Node
 		bullet.Setup(pos, dir, speed);
 		CallDeferred(MethodName.AddObject, bullet);
 	}
+
+	private void OnCreateExplosion(Vector2 pos)
+	{
+		Explosion explosion = _explosionScene.Instantiate<Explosion>();
+		explosion.GlobalPosition = pos;
+		CallDeferred(MethodName.AddObject, explosion);
+	}
+
 }

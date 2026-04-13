@@ -15,6 +15,8 @@ public partial class LevelBase : Node
 		{
 			//SignalHub.EmitOnCreateBullet(new Vector2(150, -50), new Vector2(1, 1), 50.0f, _bulletScene);
 			//_shooter.Shoot(new Vector2(1,1));
+
+			SignalHub.EmitOnECreatexplosion(new Vector2(150, -50));
 		}
 	}
 }
