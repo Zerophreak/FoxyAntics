@@ -1,1 +1,3 @@
 res://Scenes/Objects/Explosion/Explosion.tscn
+res://Scenes/Objects/Explosion/Explosion.cs
+res://Scenes/Objects/ObjectMaker/ObjectMaker.cs
