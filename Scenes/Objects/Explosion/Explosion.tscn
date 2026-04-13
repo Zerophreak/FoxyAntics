@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://boyel13t7vrw5"]
+
+[ext_resource type="Texture2D" uid="uid://cbeyog8tijf2r" path="res://Assets/explosion/enemy-deadth.png" id="1_o354s"]
+[ext_resource type="AudioStream" uid="uid://bqlsc22wwc42d" path="res://Assets/sound/pickup3.ogg" id="2_4ll85"]
+[ext_resource type="AudioStream" uid="uid://c7giqqyybyivv" path="res://Assets/sound/pickup5.ogg" id="3_ikqvb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2voo"]
+atlas = ExtResource("1_o354s")
+region = Rect2(0, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c7g2"]
+atlas = ExtResource("1_o354s")
+region = Rect2(40, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2tmt"]
+atlas = ExtResource("1_o354s")
+region = Rect2(80, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crryn"]
+atlas = ExtResource("1_o354s")
+region = Rect2(120, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp6xp"]
+atlas = ExtResource("1_o354s")
+region = Rect2(160, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk8c3"]
+atlas = ExtResource("1_o354s")
+region = Rect2(200, 0, 40, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btdce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2voo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c7g2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2tmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crryn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp6xp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk8c3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_11aqx"]
+streams_count = 2
+stream_0/stream = ExtResource("2_4ll85")
+stream_1/stream = ExtResource("3_ikqvb")
+
+[node name="Explosion" type="AnimatedSprite2D" unique_id=1828574692]
+sprite_frames = SubResource("SpriteFrames_btdce")
+autoplay = "default"
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1699312394]
+stream = SubResource("AudioStreamRandomizer_11aqx")
