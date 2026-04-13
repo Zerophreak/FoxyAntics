@@ -16,3 +16,7 @@ res://Scenes/Main/Main.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
 res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn
+res://Scenes/Enemies/EnemyBase/EnemyBase.tscn
+res://Scenes/LevelBase/LevelBase.tscn
+res://Scenes/Enemies/Snail/Snail.tscn
+res://Scenes/Enemies/Eagle/Eagle.tscn

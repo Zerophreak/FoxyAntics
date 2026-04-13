@@ -29,9 +29,10 @@ public partial class EnemyBase : CharacterBody2D
 
 		_screenNotifier.ScreenEntered += OnScreenEntered; 
 		_timer.Timeout += OnTimeout;
+		_hitBox.AreaEntered += HitBoxAreaEntered;
 	}
-	
-	protected virtual void OnScreenEntered()
+
+    protected virtual void OnScreenEntered()
 	{
 		GD.Print("OnScreenEntered");
 		_timer.Start();
@@ -43,8 +44,12 @@ public partial class EnemyBase : CharacterBody2D
 		//added to frog.cs as override
 	}
 
+	private void HitBoxAreaEntered(Area2D area)
+	{
+		Die();
+	}
 
-	public override void _Process(double delta)
+    public override void _Process(double delta)
 	{
 		FallenOff();
 	}
@@ -67,5 +72,11 @@ public partial class EnemyBase : CharacterBody2D
 	protected virtual void FlipMe()
 	{
 		_animatedSprite2D.FlipH = _playerRef.GlobalPosition.X > GlobalPosition.X;
+	}
+
+	private void Die()
+	{
+		SignalHub.EmitOnECreatexplosion(GlobalPosition);
+		QueueFree();
 	}
 }

@@ -9,6 +9,8 @@
 radius = 13.0
 height = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4258"]
+
 [node name="Eagle" unique_id=740995919 node_paths=PackedStringArray("_shooter", "_playerDetect") instance=ExtResource("1_euo1a")]
 collision_layer = 6
 script = ExtResource("2_8eptn")
@@ -27,8 +29,8 @@ shape = SubResource("CapsuleShape2D_euo1a")
 rect = Rect2(-14, -13, 24, 27)
 
 [node name="HitBox" parent="." index="3" unique_id=1063813255]
-collision_layer = 2
-collision_mask = 16
+position = Vector2(-3, 2)
+Shape = SubResource("RectangleShape2D_f4258")
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="5" unique_id=609168832]
 position = Vector2(0, 15)
