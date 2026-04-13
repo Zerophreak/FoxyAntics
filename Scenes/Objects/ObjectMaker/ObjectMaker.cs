@@ -4,7 +4,7 @@ using System.IO.Pipes;
 
 public partial class ObjectMaker : Node
 {
-    // Called when the node enters the scene tree for the first time.
+    private PackedScene _explosionScene = GD.Load<PackedScene>("");
     public override void _Ready()
     {
 		SignalHub.Instance.OnCreateBullet += OnCreateBullet;

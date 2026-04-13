@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbeyog8tijf2r" path="res://Assets/explosion/enemy-deadth.png" id="1_o354s"]
 [ext_resource type="AudioStream" uid="uid://bqlsc22wwc42d" path="res://Assets/sound/pickup3.ogg" id="2_4ll85"]
+[ext_resource type="Script" uid="uid://b6uk5rh6qn2ax" path="res://Scenes/Objects/Explosion/Explosion.cs" id="2_ikqvb"]
 [ext_resource type="AudioStream" uid="uid://c7giqqyybyivv" path="res://Assets/sound/pickup5.ogg" id="3_ikqvb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l2voo"]
@@ -62,6 +63,10 @@ stream_1/stream = ExtResource("3_ikqvb")
 [node name="Explosion" type="AnimatedSprite2D" unique_id=1828574692]
 sprite_frames = SubResource("SpriteFrames_btdce")
 autoplay = "default"
+frame = 5
+frame_progress = 1.0
+script = ExtResource("2_ikqvb")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1699312394]
 stream = SubResource("AudioStreamRandomizer_11aqx")
+autoplay = true
