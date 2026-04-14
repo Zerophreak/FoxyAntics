@@ -3,13 +3,23 @@ using System;
 
 public partial class Pickup : Area2D
 {
-	// Called when the node enters the scene tree for the first time.
+	[Export] private AnimatedSprite2D _animatedSprite2D;
+	[Export] private int _points = 2;
+
 	public override void _Ready()
 	{
+		PlayRandomAnimation();
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	private void PlayRandomAnimation()
 	{
+		var animNames = _animatedSprite2D.SpriteFrames.GetAnimationNames();
+
+		if(animNames.Length > 0)
+		{
+			string randName = animNames[new Random().Next(animNames.Length)];
+			_animatedSprite2D.Play(randName);
+		}
+
 	}
 }

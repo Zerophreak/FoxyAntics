@@ -508,10 +508,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Pickup" type="Area2D" unique_id=1168485955]
+[node name="Pickup" type="Area2D" unique_id=1168485955 node_paths=PackedStringArray("_animatedSprite2D")]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_itc74")
+_animatedSprite2D = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=389842507]
 shape = SubResource("CircleShape2D_6o28o")
