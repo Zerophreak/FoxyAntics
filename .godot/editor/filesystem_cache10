@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776178633
+::res://::1776240531
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -125,9 +125,9 @@ Explosion.tscn::PackedScene::3418873482195517782::1776081563::0::1::::<><><>0<>0
 ::res://Scenes/Objects/ObjectMaker/::1776084020
 ObjectMaker.cs::CSharpScript::7645539007395506912::1776083934::0::1::::<>Node<><>0<>0<><>::
 ObjectMaker.tscn::PackedScene::701600724330226601::1776084020::0::1::::<><><>0<>0<><>::uid://dg6s57pleusma::::res://Scenes/Objects/ObjectMaker/ObjectMaker.cs<>uid://boyel13t7vrw5::::res://Scenes/Objects/Explosion/Explosion.tscn
-::res://Scenes/Objects/Pickup/::1776172746
-Pickup.cs::CSharpScript::5312130430139457619::1776172713::0::1::::<><><>0<>0<><>::
-Pickup.tscn::PackedScene::1824900406539510351::1776172746::0::1::::<><><>0<>0<><>::uid://chxian7q25b20::::res://Scenes/Objects/Pickup/Pickup.cs<>uid://bjtvcyhsjhttu::::res://Assets/items/Bananas.png<>uid://b2y7biqvifmcy::::res://Assets/items/Cherries.png<>uid://cxq22afmr88bc::::res://Assets/items/Kiwi.png<>uid://usfgwsf6dqfr::::res://Assets/items/Melon.png
+::res://Scenes/Objects/Pickup/::1776179844
+Pickup.cs::CSharpScript::5312130430139457619::1776179753::0::1::::<>Area2D<><>0<>0<><>::
+Pickup.tscn::PackedScene::1824900406539510351::1776179844::0::1::::<><><>0<>0<><>::uid://chxian7q25b20::::res://Scenes/Objects/Pickup/Pickup.cs<>uid://bjtvcyhsjhttu::::res://Assets/items/Bananas.png<>uid://b2y7biqvifmcy::::res://Assets/items/Cherries.png<>uid://cxq22afmr88bc::::res://Assets/items/Kiwi.png<>uid://usfgwsf6dqfr::::res://Assets/items/Melon.png
 ::res://Scenes/Objects/PlayerBullet/::1774962823
 PlayerBullet.tscn::PackedScene::8473910550091893677::1774962823::0::1::::<><><>0<>0<><>::uid://cupod72lhsg7a::::res://Scenes/Objects/BulletBase/BulletBase.tscn<>uid://7cb8g4wqxgyv::::res://Assets/items/bullet1.png
 ::res://Scenes/Objects/Shooter/::1775483127
