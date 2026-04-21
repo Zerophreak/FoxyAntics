@@ -16,3 +16,4 @@ res://Scenes/Main/Main.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
 res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn
+res://Scenes/LevelBase/LevelBase.tscn

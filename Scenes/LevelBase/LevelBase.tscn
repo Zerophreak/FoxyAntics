@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://clb12lib5rv24" path="res://Scenes/Enemies/Frog/Frog.tscn" id="5_lmtt4"]
 [ext_resource type="PackedScene" uid="uid://dvsvg1targ8xm" path="res://Scenes/Enemies/Eagle/Eagle.tscn" id="6_ooqsx"]
 [ext_resource type="PackedScene" uid="uid://j84i5hbcgoq8" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn" id="8_o536s"]
-[ext_resource type="PackedScene" uid="uid://0883wugxymx8" path="res://Scenes/Objects/Pickup/Pickup.tscn" id="9_dufl6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78m1b"]
 texture = ExtResource("2_bgw71")
@@ -296,6 +295,3 @@ position = Vector2(630, -167)
 [node name="ObjectMaker" parent="." unique_id=1940432932 instance=ExtResource("8_o536s")]
 
 [node name="Pickup" type="Node" parent="." unique_id=967178206]
-
-[node name="FruitPickup" parent="Pickup" unique_id=1168485955 instance=ExtResource("9_dufl6")]
-position = Vector2(499, -13)
