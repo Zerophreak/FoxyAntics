@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dg6s57pleusma" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.cs" id="1_v72af"]
 [ext_resource type="PackedScene" uid="uid://boyel13t7vrw5" path="res://Scenes/Objects/Explosion/Explosion.tscn" id="2_curf5"]
+[ext_resource type="PackedScene" uid="uid://0883wugxymx8" path="res://Scenes/Objects/Pickup/Pickup.tscn" id="3_rcij4"]
 
 [node name="ObjectMaker" type="Node" unique_id=1940432932]
 script = ExtResource("1_v72af")
 _explosionScene = ExtResource("2_curf5")
+_pickupScene = ExtResource("3_rcij4")

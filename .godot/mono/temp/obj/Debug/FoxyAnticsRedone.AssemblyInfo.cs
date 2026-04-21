@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoxyAnticsRedone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b864d128f218b7b356be6dbb081a491d43cf3ba8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09a273875590bb49c2d03e91a27a866edc50809f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxyAnticsRedone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxyAnticsRedone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

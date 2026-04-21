@@ -16,7 +16,6 @@ public partial class EnemyBase : CharacterBody2D
 	protected float _gravity = 800.0f;
 	protected Player _playerRef; 
 
-
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -76,7 +75,8 @@ public partial class EnemyBase : CharacterBody2D
 
 	private void Die()
 	{
-		SignalHub.EmitOnECreatexplosion(GlobalPosition);
+		SignalHub.EmitOnCreatExplosion(GlobalPosition);
+		SignalHub.EmitOnCreatePickup(GlobalPosition);
 		QueueFree();
 	}
 }
