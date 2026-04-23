@@ -10,14 +10,20 @@ public partial class Player : CharacterBody2D
 
 	public bool IsStill {get {return Mathf.IsZeroApprox(Velocity.X); }}
 	public bool IsFalling { get { return Velocity.Y > 0; }}
-	public bool OnFloor { get { return IsOnFloor();}}
+	public bool OnFloor { get { return IsOnFloor(); }}
+	public bool IsHurt {get {return _isHurt; }}
 
 	[Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
+	[Export] private AudioStreamPlayer2D _hurtSound;
 	[Export] private Sprite2D _sprite;
 	[Export] private Shooter _shooter;
+	[Export] private Timer _hurtTimer;
+	[Export] private HitBox _hitBox;
+
 
 	private bool _jumped = false;
+	private bool _isHurt = false;
 
     public override void _UnhandledInput(InputEvent @event)
     {
@@ -40,6 +46,7 @@ public partial class Player : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_hitBox.AreaEntered += OnHitboxAreaEntered;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -75,6 +82,19 @@ public partial class Player : CharacterBody2D
 		}
 
 		return velocity;
+	}
 
+	private void ApplyHurtJump()
+	{
+		_isHurt = true;
+		_hurtTimer.Start();
+		_hurtSound.Play();
+
+	}
+
+	//signal functions
+	private void OnHitboxAreaEntered(Area2D area)
+	{
+		ApplyHurtJump();
 	}
 }

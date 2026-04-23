@@ -1,9 +1,9 @@
+Timer
 AudioStreamPlayer2D
 Node
 AnimatedSprite2D
 CollisionShape2D
 Area2D
-Timer
 Sprite2D
 RayCast2D
 AnimationTree

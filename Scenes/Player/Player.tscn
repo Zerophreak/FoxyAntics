@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cohilrj0xwffn" path="res://Scenes/HitBox/Hitbox.tscn" id="5_jmcll"]
 [ext_resource type="PackedScene" uid="uid://iafhp6aswaa1" path="res://Scenes/Objects/Shooter/Shooter.tscn" id="6_t26db"]
 [ext_resource type="PackedScene" uid="uid://dsy3cloos1ou4" path="res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn" id="7_fk5o5"]
+[ext_resource type="AudioStream" uid="uid://bhoocgfyn6i33" path="res://Assets/sound/damage.wav" id="8_fk5o5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 7.0
@@ -187,6 +188,18 @@ advance_expression = "OnFloor == false"
 advance_mode = 2
 advance_expression = "OnFloor == true"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_epg6k"]
+advance_mode = 2
+advance_expression = "IsHurt == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_spxdj"]
+advance_mode = 2
+advance_expression = "IsHurt == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0objx"]
+advance_mode = 2
+advance_expression = "IsHurt == true"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0kmp4"]
 states/Air/node = SubResource("AnimationNodeStateMachine_epg6k")
 states/Air/position = Vector2(586, 107.305435)
@@ -194,21 +207,24 @@ states/Grounded/node = SubResource("AnimationNodeStateMachine_825xp")
 states/Grounded/position = Vector2(398, 107.305435)
 states/Start/position = Vector2(192, 107.305435)
 states/hurt/node = SubResource("AnimationNodeAnimation_ude3g")
-states/hurt/position = Vector2(494, 206.30545)
-transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083"), "Grounded", "Air", SubResource("AnimationNodeStateMachineTransition_esmjy"), "Air", "Grounded", SubResource("AnimationNodeStateMachineTransition_6tu5v")]
+states/hurt/position = Vector2(426, 212.30545)
+transitions = ["Start", "Grounded", SubResource("AnimationNodeStateMachineTransition_ji083"), "Grounded", "Air", SubResource("AnimationNodeStateMachineTransition_esmjy"), "Air", "Grounded", SubResource("AnimationNodeStateMachineTransition_6tu5v"), "Air", "hurt", SubResource("AnimationNodeStateMachineTransition_epg6k"), "hurt", "Grounded", SubResource("AnimationNodeStateMachineTransition_spxdj"), "Grounded", "hurt", SubResource("AnimationNodeStateMachineTransition_0objx")]
 graph_offset = Vector2(0, 18.30544)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4wape"]
 radius = 5.8
 height = 22.65
 
-[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_sprite", "_shooter")]
+[node name="Player" type="CharacterBody2D" unique_id=1301817131 node_paths=PackedStringArray("_debugLabel", "_jumpSound", "_hurtSound", "_sprite", "_shooter", "_hurtTimer", "_hitBox")]
 collision_layer = 0
 script = ExtResource("1_h54ih")
 _debugLabel = NodePath("DebugLabel")
 _jumpSound = NodePath("JumpSound")
+_hurtSound = NodePath("HurtSound")
 _sprite = NodePath("Sprite2D")
 _shooter = NodePath("Shooter")
+_hurtTimer = NodePath("HurtTimer")
+_hitBox = NodePath("HitBox")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814302173]
 texture = ExtResource("1_s0eop")
@@ -248,3 +264,10 @@ Shape = SubResource("CapsuleShape2D_4wape")
 [node name="Shooter" parent="." unique_id=1877070957 instance=ExtResource("6_t26db")]
 _bulletScene = ExtResource("7_fk5o5")
 _speed = 120.0
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="." unique_id=237214596]
+stream = ExtResource("8_fk5o5")
+
+[node name="HurtTimer" type="Timer" parent="." unique_id=780276316]
+wait_time = 0.6
+one_shot = true
