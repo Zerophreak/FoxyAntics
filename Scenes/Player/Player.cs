@@ -3,6 +3,8 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
+	private readonly Vector2 HURT_JUMP_VELOCITY = new Vector2(0, -130f);
+
 	private const float GRAVITY = 690.0f;
 	private const float RUN_SPEED = 120.0f;
 	private const float JUMP_SPEED = -270.0f;
@@ -47,6 +49,7 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
 	{
 		_hitBox.AreaEntered += OnHitboxAreaEntered;
+		_hurtTimer.Timeout += OnHurtTimerTimeout;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,6 +70,8 @@ public partial class Player : CharacterBody2D
 
 	private Vector2 GetInput(Vector2 velocity)
 	{
+		if(IsHurt) return velocity;
+
 		velocity.X = Input.GetAxis("left", "right") * RUN_SPEED;
 
 		if(IsOnFloor() && _jumped)
@@ -89,12 +94,17 @@ public partial class Player : CharacterBody2D
 		_isHurt = true;
 		_hurtTimer.Start();
 		_hurtSound.Play();
-
+		Velocity = HURT_JUMP_VELOCITY;
 	}
 
 	//signal functions
 	private void OnHitboxAreaEntered(Area2D area)
 	{
-		ApplyHurtJump();
+		CallDeferred(nameof(ApplyHurtJump));
+	}
+
+	private void OnHurtTimerTimeout()
+	{
+		_isHurt = false;
 	}
 }
