@@ -15,17 +15,22 @@ public partial class Player : CharacterBody2D
 	public bool OnFloor { get { return IsOnFloor(); }}
 	public bool IsHurt {get {return _isHurt; }}
 
-	[Export]private Label _debugLabel;
+    public AnimationPlayer AnimationFinsished { get; private set; }
+    public int OnAnimationInvincible { get; private set; }
+
+    [Export]private Label _debugLabel;
 	[Export] private AudioStreamPlayer2D _jumpSound;
 	[Export] private AudioStreamPlayer2D _hurtSound;
 	[Export] private Sprite2D _sprite;
 	[Export] private Shooter _shooter;
 	[Export] private Timer _hurtTimer;
 	[Export] private HitBox _hitBox;
+	[Export] private AnimationPlayer _animationInvicible;
 
 
 	private bool _jumped = false;
 	private bool _isHurt = false;
+	private bool _isInvincible = false;
 
     public override void _UnhandledInput(InputEvent @event)
     {
@@ -50,6 +55,7 @@ public partial class Player : CharacterBody2D
 	{
 		_hitBox.AreaEntered += OnHitboxAreaEntered;
 		_hurtTimer.Timeout += OnHurtTimerTimeout;
+		_animationInvicible.AnimationFinished += OnAnimationInvFinished;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -89,6 +95,13 @@ public partial class Player : CharacterBody2D
 		return velocity;
 	}
 
+	private void GoInvincible()
+	{
+		if(_isInvincible) return;
+		_isInvincible = true;
+		_animationInvicible.Play("invincible");
+	}
+
 	private void ApplyHurtJump()
 	{
 		_isHurt = true;
@@ -97,14 +110,27 @@ public partial class Player : CharacterBody2D
 		Velocity = HURT_JUMP_VELOCITY;
 	}
 
+	private void ApplyHit()
+	{
+		if(_isInvincible) return;
+		ApplyHurtJump();
+		GoInvincible();
+	}
+
 	//signal functions
 	private void OnHitboxAreaEntered(Area2D area)
 	{
-		CallDeferred(nameof(ApplyHurtJump));
+		CallDeferred(nameof(ApplyHit));
 	}
 
 	private void OnHurtTimerTimeout()
 	{
 		_isHurt = false;
+	}
+
+	private void OnAnimationInvFinished(StringName animName)
+	{
+		_isInvincible = false;
+		_animationInvicible.Play("RESET");
 	}
 }

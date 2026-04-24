@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776936936
+::res://::1777028504
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -136,8 +136,8 @@ Shooter.tscn::PackedScene::561827670389533482::1775483127::0::1::::<><><>0<>0<><
 ::res://Scenes/Objects/Shooter/LifeTime/::1774961978
 LifeTime.cs::CSharpScript::4902495950223965546::1774961920::0::1::::<>Node<><>0<>0<><>::
 LifeTime.tscn::PackedScene::3699549249621867246::1774961978::0::1::::<><><>0<>0<><>::uid://cb32nlgutu6io::::res://Scenes/Objects/Shooter/LifeTime/LifeTime.cs
-::res://Scenes/Player/::1775568667
-Player.cs::CSharpScript::7777292425589243284::1775484442::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Player.tscn::PackedScene::8290706201624041080::1775568667::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://qgtu5ev8dmbp::::res://Assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://c82jcfga5jbed::::res://Assets/sound/jump.wav<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dsy3cloos1ou4::::res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn
+::res://Scenes/Player/::1776939201
+Player.cs::CSharpScript::7777292425589243284::1776940169::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.tscn::PackedScene::8290706201624041080::1776939201::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://qgtu5ev8dmbp::::res://Assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://c82jcfga5jbed::::res://Assets/sound/jump.wav<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dsy3cloos1ou4::::res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn<>uid://bhoocgfyn6i33::::res://Assets/sound/damage.wav
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::

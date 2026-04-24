@@ -1,3 +1,4 @@
+AnimationPlayer
 Timer
 AudioStreamPlayer2D
 Node
@@ -7,6 +8,5 @@ Area2D
 Sprite2D
 RayCast2D
 AnimationTree
-AnimationPlayer
 VisibleOnScreenNotifier2D
 CharacterBody2D
