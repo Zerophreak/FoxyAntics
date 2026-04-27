@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c64ocyqj7qvx2"]
 
 [ext_resource type="PackedScene" uid="uid://cohilrj0xwffn" path="res://Scenes/HitBox/Hitbox.tscn" id="1_hxirr"]
+[ext_resource type="Script" uid="uid://dwabyonfs1f6o" path="res://Scenes/Enemies/Boss/Boss.cs" id="1_p6b2q"]
 [ext_resource type="Texture2D" uid="uid://c8qpobn0or6ca" path="res://Assets/enemies/boss/boss.png" id="1_ycee1"]
 [ext_resource type="PackedScene" uid="uid://iafhp6aswaa1" path="res://Scenes/Objects/Shooter/Shooter.tscn" id="2_ycee1"]
 
@@ -102,6 +103,12 @@ animation = &"RESET"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p6b2q"]
 animation = &"arrival"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bkrwd"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lme58"]
+animation = &"pulse"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bkrwd"]
 advance_mode = 2
 
@@ -109,14 +116,31 @@ advance_mode = 2
 advance_mode = 2
 advance_condition = &"on_trigger"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xg1aj"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ectx"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gtnai"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xg1aj"]
 states/RESET/node = SubResource("AnimationNodeAnimation_ycee1")
 states/RESET/position = Vector2(311, 100)
 states/arrival/node = SubResource("AnimationNodeAnimation_p6b2q")
 states/arrival/position = Vector2(460, 100)
-transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58")]
+states/attack/node = SubResource("AnimationNodeAnimation_bkrwd")
+states/attack/position = Vector2(712, 89)
+states/pulse/node = SubResource("AnimationNodeAnimation_lme58")
+states/pulse/position = Vector2(575, 95)
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
 
 [node name="Boss" type="Node2D" unique_id=1773976859]
+script = ExtResource("1_p6b2q")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1817347753]
 
@@ -144,6 +168,7 @@ shape = SubResource("RectangleShape2D_p6b2q")
 libraries/ = SubResource("AnimationLibrary_bkrwd")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1524059760]
+deterministic = false
 tree_root = SubResource("AnimationNodeStateMachine_xg1aj")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/on_trigger = true
+parameters/conditions/on_trigger = false
