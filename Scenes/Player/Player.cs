@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
 {
@@ -27,7 +28,7 @@ public partial class Player : CharacterBody2D
 	[Export] private HitBox _hitBox;
 	[Export] private AnimationPlayer _animationInvicible;
 
-
+	private List<Area2D> _currentDamageAreas = new List<Area2D>();
 	private bool _jumped = false;
 	private bool _isHurt = false;
 	private bool _isInvincible = false;
@@ -53,13 +54,14 @@ public partial class Player : CharacterBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_hitBox.AreaEntered += OnHitboxAreaEntered;
+		_hitBox.AreaEntered += OnHitBoxAreaEntered;
+		_hitBox.AreaExited += OnhitBoxAreaExited;
 		_hurtTimer.Timeout += OnHurtTimerTimeout;
 		_animationInvicible.AnimationFinished += OnAnimationInvFinished;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _PhysicsProcess(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 		velocity.Y += GRAVITY * (float)delta;
@@ -117,10 +119,22 @@ public partial class Player : CharacterBody2D
 		GoInvincible();
 	}
 
-	//signal functions
-	private void OnHitboxAreaEntered(Area2D area)
+	//signal  methods 
+	private void OnHitBoxAreaEntered(Area2D area)
 	{
 		CallDeferred(nameof(ApplyHit));
+		if( area is HitBox && !_currentDamageAreas.Contains(area))
+		{
+			_currentDamageAreas.Add(area);
+		}
+	}
+
+	private void OnhitBoxAreaExited(Area2D area)
+	{
+		if (_currentDamageAreas.Contains(area))
+		{
+			_currentDamageAreas.Remove(area);
+		}
 	}
 
 	private void OnHurtTimerTimeout()
