@@ -139,8 +139,10 @@ states/pulse/node = SubResource("AnimationNodeAnimation_lme58")
 states/pulse/position = Vector2(575, 95)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
 
-[node name="Boss" type="Node2D" unique_id=1773976859]
+[node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger")]
 script = ExtResource("1_p6b2q")
+_animationTree = NodePath("AnimationTree")
+_trigger = NodePath("Trigger")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1817347753]
 
@@ -151,6 +153,7 @@ texture = ExtResource("1_ycee1")
 
 [node name="HitBox" parent="Visuals" unique_id=1063813255 instance=ExtResource("1_hxirr")]
 position = Vector2(-3, -36)
+collision_layer = 18
 Shape = SubResource("RectangleShape2D_bkrwd")
 
 [node name="Shooter" parent="Visuals" unique_id=1877070957 instance=ExtResource("2_ycee1")]
@@ -159,6 +162,8 @@ _speed = 100.0
 
 [node name="Trigger" type="Area2D" parent="." unique_id=215976999]
 position = Vector2(-180, 10)
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=919401140]
 position = Vector2(-9.5, -317)

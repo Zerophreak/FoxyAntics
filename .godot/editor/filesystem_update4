@@ -17,3 +17,4 @@ res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
 res://Scenes/Enemies/Boss/Boss.tscn
 res://Scenes/Enemies/Boss/Boss.cs
+res://Scenes/LevelBase/LevelBase.tscn
