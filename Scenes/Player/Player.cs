@@ -146,5 +146,9 @@ public partial class Player : CharacterBody2D
 	{
 		_isInvincible = false;
 		_animationInvicible.Play("RESET");
+		if(_currentDamageAreas.Count > 0)
+		{
+			CallDeferred(nameof(ApplyHit));
+		}
 	}
 }
