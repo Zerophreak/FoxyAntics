@@ -285,10 +285,10 @@ position = Vector2(531, -19)
 [node name="Enemies" type="Node" parent="." unique_id=889247511]
 
 [node name="Snail" parent="Enemies" unique_id=740995919 instance=ExtResource("4_3lxj6")]
-position = Vector2(463, -14)
+position = Vector2(199, -18)
 
 [node name="Frog" parent="Enemies" unique_id=1196648342 instance=ExtResource("5_lmtt4")]
-position = Vector2(478, -102)
+position = Vector2(322, -104)
 
 [node name="Eagle" parent="Enemies" unique_id=1966561809 instance=ExtResource("6_ooqsx")]
 position = Vector2(630, -167)

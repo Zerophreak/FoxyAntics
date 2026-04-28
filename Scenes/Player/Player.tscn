@@ -213,7 +213,7 @@ graph_offset = Vector2(0, 18.30544)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4wape"]
 radius = 5.8
-height = 22.65
+height = 24.0
 
 [sub_resource type="Animation" id="Animation_ji083"]
 length = 0.001
@@ -266,12 +266,13 @@ _hitBox = NodePath("HitBox")
 _animationInvicible = NodePath("Invincible")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1814302173]
+position = Vector2(0, -17)
 texture = ExtResource("1_s0eop")
 hframes = 19
 frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=607007949]
-position = Vector2(0, 6)
+position = Vector2(-0.5, -11)
 shape = SubResource("CapsuleShape2D_ft8w5")
 
 [node name="PlayerCam" parent="." unique_id=1195599328 instance=ExtResource("2_ft8w5")]
@@ -295,12 +296,13 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="HitBox" parent="." unique_id=1063813255 instance=ExtResource("5_jmcll")]
-position = Vector2(0, 5)
+position = Vector2(0, -12)
 collision_layer = 4
 collision_mask = 10
 Shape = SubResource("CapsuleShape2D_4wape")
 
 [node name="Shooter" parent="." unique_id=1877070957 instance=ExtResource("6_t26db")]
+position = Vector2(-0.5, -17)
 _bulletScene = ExtResource("7_fk5o5")
 _speed = 120.0
 

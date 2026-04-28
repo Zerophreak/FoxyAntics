@@ -8,6 +8,7 @@ public partial class Boss : Node2D
 	[Export] private Area2D _trigger;
 	[Export] private Shooter _Shooter;
 	[Export] private Node2D _visuals;
+	[Export] private HitBox _hitBox;
 
 	private Player _playerRef;
 
@@ -22,6 +23,12 @@ public partial class Boss : Node2D
 			QueueFree();
 		}
 	}
+
+	public void ActivateHitBox()
+	{
+		_hitBox.Activate(true);
+	}
+
 
 	public void Shoot()
 	{

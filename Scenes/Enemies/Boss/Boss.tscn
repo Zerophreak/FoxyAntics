@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dwabyonfs1f6o" path="res://Scenes/Enemies/Boss/Boss.cs" id="1_p6b2q"]
 [ext_resource type="Texture2D" uid="uid://c8qpobn0or6ca" path="res://Assets/enemies/boss/boss.png" id="1_ycee1"]
 [ext_resource type="PackedScene" uid="uid://iafhp6aswaa1" path="res://Scenes/Objects/Shooter/Shooter.tscn" id="2_ycee1"]
+[ext_resource type="PackedScene" uid="uid://dqq1u8mtxumw3" path="res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn" id="5_bkrwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkrwd"]
 size = Vector2(40, 60)
@@ -53,6 +54,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.5, 0.5)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ActivateHitBox"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_bkrwd"]
@@ -153,12 +168,13 @@ states/pulse/node = SubResource("AnimationNodeAnimation_lme58")
 states/pulse/position = Vector2(575, 95)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
 
-[node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger", "_Shooter", "_visuals")]
+[node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger", "_Shooter", "_visuals", "_hitBox")]
 script = ExtResource("1_p6b2q")
 _animationTree = NodePath("AnimationTree")
 _trigger = NodePath("Trigger")
 _Shooter = NodePath("Visuals/Shooter")
 _visuals = NodePath("Visuals")
+_hitBox = NodePath("Visuals/HitBox")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1817347753]
 
@@ -174,6 +190,7 @@ Shape = SubResource("RectangleShape2D_bkrwd")
 
 [node name="Shooter" parent="Visuals" unique_id=1877070957 instance=ExtResource("2_ycee1")]
 position = Vector2(-13, -41)
+_bulletScene = ExtResource("5_bkrwd")
 _speed = 100.0
 
 [node name="Trigger" type="Area2D" parent="." unique_id=215976999]

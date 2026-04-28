@@ -31,4 +31,10 @@ public partial class HitBox : Area2D
 	{
 		_collisionShape2D.Shape = _shape;
 	}
+
+	public void Activate(bool isOn)
+	{
+		SetDeferred(Area2D.PropertyName.Monitoring, isOn);
+		SetDeferred(Area2D.PropertyName.Monitorable, isOn);
+	}
 }
