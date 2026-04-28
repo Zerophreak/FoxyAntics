@@ -153,10 +153,12 @@ states/pulse/node = SubResource("AnimationNodeAnimation_lme58")
 states/pulse/position = Vector2(575, 95)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
 
-[node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger")]
+[node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger", "_Shooter", "_visuals")]
 script = ExtResource("1_p6b2q")
 _animationTree = NodePath("AnimationTree")
 _trigger = NodePath("Trigger")
+_Shooter = NodePath("Visuals/Shooter")
+_visuals = NodePath("Visuals")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1817347753]
 

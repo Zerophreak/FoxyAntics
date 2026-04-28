@@ -7,8 +7,9 @@ public partial class Boss : Node2D
 	[Export] private AnimationTree _animationTree;
 	[Export] private Area2D _trigger;
 	[Export] private Shooter _Shooter;
+	[Export] private Node2D _visuals;
 
-	protected Player _playerRef;
+	private Player _playerRef;
 
 	public override void _Ready()
 	{
@@ -25,7 +26,7 @@ public partial class Boss : Node2D
 	public void Shoot()
 	{
 		GD.Print("Boss Shoot");
-		_Shooter.Shoot(GlobalPosition.DirectionTo(_playerRef.GlobalPosition));
+		_Shooter.Shoot(_visuals.GlobalPosition.DirectionTo(_playerRef.GlobalPosition));
 	}
 
     private void OntriggerAreaEntered(Area2D area)
