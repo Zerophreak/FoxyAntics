@@ -294,7 +294,7 @@ position = Vector2(478, -102)
 position = Vector2(630, -167)
 
 [node name="Boss" parent="Enemies" unique_id=1773976859 instance=ExtResource("8_dufl6")]
-position = Vector2(912, 5)
+position = Vector2(1001, 6)
 
 [node name="ObjectMaker" parent="." unique_id=1940432932 instance=ExtResource("8_o536s")]
 
