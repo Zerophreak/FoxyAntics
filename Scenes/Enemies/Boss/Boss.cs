@@ -20,7 +20,6 @@ public partial class Boss : Node2D
 			GD.PrintErr("No Player ref");
 			QueueFree();
 		}
-
 	}
 
 	public void Shoot()
