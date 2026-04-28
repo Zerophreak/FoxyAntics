@@ -11,6 +11,11 @@ public partial class Boss : Node2D
 		_trigger.AreaEntered += OntriggerAreaEntered;
 	}
 
+	public void Shoot()
+	{
+		GD.Print("Boss Shoot");
+	}
+
     private void OntriggerAreaEntered(Area2D area)
     {	
 		//condition
