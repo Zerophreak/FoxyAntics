@@ -38,6 +38,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_p6b2q"]
 resource_name = "arrival"
@@ -101,6 +113,23 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xg1aj"]
+resource_name = "hit"
+length = 2.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.8117647, 0.07058824, 0.011764706, 1), Color(1, 1, 1, 1), Color(0.8117647, 0.07058824, 0.011764706, 1), Color(1, 1, 1, 1), Color(0.8117647, 0.07058824, 0.011764706, 1), Color(1, 1, 1, 1), Color(0.8117647, 0.07058824, 0.011764706, 1), Color(1, 1, 1, 1), Color(0.8117647, 0.07058824, 0.011764706, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_lme58"]
 resource_name = "pulse"
 length = 3.0
@@ -123,6 +152,7 @@ _data = {
 &"RESET": SubResource("Animation_ycee1"),
 &"arrival": SubResource("Animation_p6b2q"),
 &"attack": SubResource("Animation_bkrwd"),
+&"hit": SubResource("Animation_xg1aj"),
 &"pulse": SubResource("Animation_lme58")
 }
 
@@ -134,6 +164,9 @@ animation = &"arrival"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bkrwd"]
 animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xg1aj"]
+animation = &"hit"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lme58"]
 animation = &"pulse"
@@ -157,16 +190,22 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6xnkd"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xg1aj"]
 states/RESET/node = SubResource("AnimationNodeAnimation_ycee1")
 states/RESET/position = Vector2(311, 100)
 states/arrival/node = SubResource("AnimationNodeAnimation_p6b2q")
 states/arrival/position = Vector2(460, 100)
 states/attack/node = SubResource("AnimationNodeAnimation_bkrwd")
-states/attack/position = Vector2(712, 89)
+states/attack/position = Vector2(709, 95)
+states/hit/node = SubResource("AnimationNodeAnimation_xg1aj")
+states/hit/position = Vector2(467, 191)
 states/pulse/node = SubResource("AnimationNodeAnimation_lme58")
 states/pulse/position = Vector2(575, 95)
-transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai")]
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_bkrwd"), "RESET", "arrival", SubResource("AnimationNodeStateMachineTransition_lme58"), "arrival", "pulse", SubResource("AnimationNodeStateMachineTransition_xg1aj"), "pulse", "attack", SubResource("AnimationNodeStateMachineTransition_5ectx"), "attack", "pulse", SubResource("AnimationNodeStateMachineTransition_gtnai"), "hit", "pulse", SubResource("AnimationNodeStateMachineTransition_6xnkd")]
 
 [node name="Boss" type="Node2D" unique_id=1773976859 node_paths=PackedStringArray("_animationTree", "_trigger", "_Shooter", "_visuals", "_hitBox")]
 script = ExtResource("1_p6b2q")
@@ -186,6 +225,7 @@ texture = ExtResource("1_ycee1")
 [node name="HitBox" parent="Visuals" unique_id=1063813255 instance=ExtResource("1_hxirr")]
 position = Vector2(-3, -36)
 collision_layer = 18
+collision_mask = 16
 Shape = SubResource("RectangleShape2D_bkrwd")
 
 [node name="Shooter" parent="Visuals" unique_id=1877070957 instance=ExtResource("2_ycee1")]
