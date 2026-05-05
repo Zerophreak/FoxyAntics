@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PT+mgWfIlPI=",
+  "dgSpecHash": "OjzWVxcTGts=",
   "success": true,
-  "projectFilePath": "F:\\Dev\\Projects\\FoxyAntics\\FoxyAnticsRedone.csproj",
+  "projectFilePath": "F:\\Dev\\Projects\\FoxyAntics\\Foxy antics.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Raymon\\.nuget\\packages\\godot.sourcegenerators\\4.6.1\\godot.sourcegenerators.4.6.1.nupkg.sha512",
-    "C:\\Users\\Raymon\\.nuget\\packages\\godotsharp\\4.6.1\\godotsharp.4.6.1.nupkg.sha512",
-    "C:\\Users\\Raymon\\.nuget\\packages\\godotsharpeditor\\4.6.1\\godotsharpeditor.4.6.1.nupkg.sha512"
+    "C:\\Users\\Raymon\\.nuget\\packages\\godot.sourcegenerators\\4.4.1\\godot.sourcegenerators.4.4.1.nupkg.sha512",
+    "C:\\Users\\Raymon\\.nuget\\packages\\godotsharp\\4.4.1\\godotsharp.4.4.1.nupkg.sha512",
+    "C:\\Users\\Raymon\\.nuget\\packages\\godotsharpeditor\\4.4.1\\godotsharpeditor.4.4.1.nupkg.sha512",
+    "C:\\Users\\Raymon\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
   ],
   "logs": []
 }

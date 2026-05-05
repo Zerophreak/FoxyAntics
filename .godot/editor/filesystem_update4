@@ -1,8 +1,7 @@
-res://Scenes/Enemies/Boss/Boss.tscn
-res://Scenes/Enemies/Boss/Boss.cs
 res://Scenes/Objects/Pickup/Pickup.cs
 res://Scenes/Objects/Explosion/Explosion.cs
 res://Scenes/Objects/ObjectMaker/ObjectMaker.cs
+res://Scenes/Enemies/Boss/Boss.cs
 res://Scenes/Enemies/EnemyBase/EnemyBase.cs
 res://Scenes/Enemies/Eagle/Eagle.cs
 res://Scenes/Enemies/Frog/Frog.cs
@@ -17,4 +16,3 @@ res://Scenes/Main/Main.cs
 res://Globals/SignalHub.cs
 res://Globals/ScoreManager.cs
 res://Globals/GameManager.cs
-res://Scenes/LevelBase/LevelBase.tscn

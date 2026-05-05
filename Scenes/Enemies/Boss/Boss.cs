@@ -4,8 +4,6 @@ using System.ComponentModel;
 
 public partial class Boss : Node2D
 {
-
-	//TODO: Fix visuals not playing when ontrigger signal is played/
 	[Export] private AnimationTree _animationTree;
 	[Export] private Area2D _trigger;
 	[Export] private Shooter _Shooter;
@@ -66,7 +64,6 @@ public partial class Boss : Node2D
         QueueFree();
     }
 
-   
 	private void TakeDamage()
 	{
 		if(_invincible) return;
