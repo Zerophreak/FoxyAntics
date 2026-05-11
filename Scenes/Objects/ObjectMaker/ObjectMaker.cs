@@ -14,7 +14,14 @@ public partial class ObjectMaker : Node
 		SignalHub.Instance.OnCreatePickup += OnCreatePickup;
 	}
 
-    private void AddObject(Node node)
+	public override void _ExitTree()
+	{
+		SignalHub.Instance.OnCreateBullet -= OnCreateBullet;
+		SignalHub.Instance.OnCreateExplosion -= OnCreateExplosion;
+		SignalHub.Instance.OnCreatePickup -= OnCreatePickup;
+	}
+
+	private void AddObject(Node node)
 	{
 		AddChild(node);
 	}

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dvsvg1targ8xm" path="res://Scenes/Enemies/Eagle/Eagle.tscn" id="6_ooqsx"]
 [ext_resource type="PackedScene" uid="uid://c64ocyqj7qvx2" path="res://Scenes/Enemies/Boss/Boss.tscn" id="8_dufl6"]
 [ext_resource type="PackedScene" uid="uid://j84i5hbcgoq8" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn" id="8_o536s"]
+[ext_resource type="PackedScene" uid="uid://ep4ut27l0ra7" path="res://Scenes/Objects/Checkpoint/Checkpoint.tscn" id="10_hcoko"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78m1b"]
 texture = ExtResource("2_bgw71")
@@ -299,3 +300,6 @@ position = Vector2(1001, 6)
 [node name="ObjectMaker" parent="." unique_id=1940432932 instance=ExtResource("8_o536s")]
 
 [node name="Pickup" type="Node" parent="." unique_id=967178206]
+
+[node name="Checkpoint" parent="Pickup" unique_id=1737637629 instance=ExtResource("10_hcoko")]
+position = Vector2(1207, -1)

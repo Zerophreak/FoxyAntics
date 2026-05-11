@@ -5,7 +5,12 @@ public partial class LevelBase : Node
 {
 	[Export] private PackedScene _bulletScene;
 
-	public override void _UnhandledInput(InputEvent @event)
+    public override void _Ready()
+    {
+        SignalHub.Instance.OnLevelComplete += OnlevelComplete;
+    }
+
+    public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event.IsActionPressed("quit"))
 		{
@@ -19,5 +24,10 @@ public partial class LevelBase : Node
 			SignalHub.EmitOnCreatExplosion(new Vector2(150, -50));
 			
 		}
+	}
+
+	private void OnlevelComplete()
+	{
+		GD.Print("Level Completed");
 	}
 }

@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://ep4ut27l0ra7"]
 
 [ext_resource type="Texture2D" uid="uid://ryetajrdirrx" path="res://Assets/items/checkpoint.png" id="1_3i7js"]
+[ext_resource type="Script" uid="uid://b6s6gk540j4v3" path="res://Scenes/Objects/Checkpoint/Checkpoint.cs" id="1_5spl6"]
 [ext_resource type="AudioStream" uid="uid://xgpplrdxeo6f" path="res://Assets/sound/checkpoint.wav" id="2_xbhlp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbhlp"]
+size = Vector2(13, 66)
 
 [sub_resource type="Animation" id="Animation_5spl6"]
 length = 0.001
@@ -16,6 +20,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [26]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_lci2q"]
@@ -63,9 +79,21 @@ tracks/1/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("2_xbhlp")
 }],
-"times": PackedFloat32Array(0.5)
+"times": PackedFloat32Array(0.9)
 }
 tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_smjbl"]
 _data = {
@@ -74,11 +102,48 @@ _data = {
 &"open": SubResource("Animation_nq4jg")
 }
 
-[node name="Checkpoint" type="Area2D" unique_id=1737637629]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xbhlp"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5spl6"]
+animation = &"flap"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lci2q"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nq4jg"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_smjbl"]
+advance_mode = 2
+advance_condition = &"boss_killed"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xbhlp"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lk1af"]
+states/RESET/node = SubResource("AnimationNodeAnimation_xbhlp")
+states/RESET/position = Vector2(393, 100)
+states/flap/node = SubResource("AnimationNodeAnimation_5spl6")
+states/flap/position = Vector2(676, 92)
+states/open/node = SubResource("AnimationNodeAnimation_lci2q")
+states/open/position = Vector2(518, 92)
+transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_nq4jg"), "RESET", "open", SubResource("AnimationNodeStateMachineTransition_smjbl"), "open", "flap", SubResource("AnimationNodeStateMachineTransition_xbhlp")]
+
+[node name="Checkpoint" type="Area2D" unique_id=1737637629 node_paths=PackedStringArray("_animationTree")]
+collision_layer = 0
+collision_mask = 4
+monitoring = false
+script = ExtResource("1_5spl6")
+_animationTree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641608787]
+position = Vector2(9, -24)
+shape = SubResource("RectangleShape2D_xbhlp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1508115023]
+visible = false
 position = Vector2(9, -32)
 texture = ExtResource("1_3i7js")
 hframes = 26
@@ -89,3 +154,9 @@ frame = 26
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=136338194]
 libraries/ = SubResource("AnimationLibrary_smjbl")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1975296630]
+deterministic = false
+tree_root = SubResource("AnimationNodeStateMachine_lk1af")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/boss_killed = false
