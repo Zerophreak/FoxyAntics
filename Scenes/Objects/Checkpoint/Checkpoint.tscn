@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://ep4ut27l0ra7"]
 
+[ext_resource type="Texture2D" uid="uid://ryetajrdirrx" path="res://Assets/items/checkpoint.png" id="1_3i7js"]
+
 [node name="Checkpoint" type="Area2D" unique_id=1737637629]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641608787]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1508115023]
+position = Vector2(9, -32)
+texture = ExtResource("1_3i7js")
+hframes = 26
+vframes = 3
