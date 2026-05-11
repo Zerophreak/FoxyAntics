@@ -1,6 +1,78 @@
 [gd_scene format=3 uid="uid://ep4ut27l0ra7"]
 
 [ext_resource type="Texture2D" uid="uid://ryetajrdirrx" path="res://Assets/items/checkpoint.png" id="1_3i7js"]
+[ext_resource type="AudioStream" uid="uid://xgpplrdxeo6f" path="res://Assets/sound/checkpoint.wav" id="2_xbhlp"]
+
+[sub_resource type="Animation" id="Animation_5spl6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [26]
+}
+
+[sub_resource type="Animation" id="Animation_lci2q"]
+resource_name = "flap"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_nq4jg"]
+resource_name = "open"
+length = 2.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1, 1.1, 1.2, 1.3000001, 1.4, 1.5, 1.6, 1.7, 1.8000001, 1.9, 2, 2.1000001, 2.2, 2.3, 2.4, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_xbhlp")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_smjbl"]
+_data = {
+&"RESET": SubResource("Animation_5spl6"),
+&"flap": SubResource("Animation_lci2q"),
+&"open": SubResource("Animation_nq4jg")
+}
 
 [node name="Checkpoint" type="Area2D" unique_id=1737637629]
 
@@ -11,3 +83,9 @@ position = Vector2(9, -32)
 texture = ExtResource("1_3i7js")
 hframes = 26
 vframes = 3
+frame = 26
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1522527689]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=136338194]
+libraries/ = SubResource("AnimationLibrary_smjbl")
