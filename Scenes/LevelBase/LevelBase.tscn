@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c64ocyqj7qvx2" path="res://Scenes/Enemies/Boss/Boss.tscn" id="8_dufl6"]
 [ext_resource type="PackedScene" uid="uid://j84i5hbcgoq8" path="res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn" id="8_o536s"]
 [ext_resource type="PackedScene" uid="uid://ep4ut27l0ra7" path="res://Scenes/Objects/Checkpoint/Checkpoint.tscn" id="10_hcoko"]
+[ext_resource type="PackedScene" uid="uid://ucdh4fk35k53" path="res://UI/GameHud/GameHud.tscn" id="11_k6lws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78m1b"]
 texture = ExtResource("2_bgw71")
@@ -303,3 +304,7 @@ position = Vector2(1001, 6)
 
 [node name="Checkpoint" parent="Pickup" unique_id=1737637629 instance=ExtResource("10_hcoko")]
 position = Vector2(1204, 1)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1049340751]
+
+[node name="GameHud" parent="UILayer" unique_id=1498861617 instance=ExtResource("11_k6lws")]
