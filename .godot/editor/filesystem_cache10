@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777974279
+::res://::1778584104
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -84,7 +84,7 @@ GameConstants.cs::CSharpScript::586223385834135203::1774348235::0::1::::<><><>0<
 ::res://Globals/::1771857454
 GameManager.cs::CSharpScript::6468328429381770713::1771857454::0::1::::<>Node<><>0<>0<><>::
 ScoreManager.cs::CSharpScript::7971972130546852175::1771857454::0::1::::<>Node<><>0<>0<><>::
-SignalHub.cs::CSharpScript::8346202239274529438::1776779303::0::1::::<>Node<><>0<>0<><>::
+SignalHub.cs::CSharpScript::8346202239274529438::1778500571::0::1::::<>Node<><>0<>0<><>::
 ::res://Resources/::1771857454
 LG_blue_64.tres::LabelSettings::4289201097798638372::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_pink_96.tres::LabelSettings::7602017344158547840::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
@@ -92,9 +92,9 @@ LG_white_24.tres::LabelSettings::8732921665724531969::1771857454::0::1::::<><><>
 LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 ::res://Scenes/::1774960071
 ::res://Scenes/Enemies/::1777289595
-::res://Scenes/Enemies/Boss/::1777905064
-Boss.cs::CSharpScript::8703520942824118928::1777975990::0::1::::<>Node2D<><>0<>0<><>::
-Boss.tscn::PackedScene::7009417370249089437::1777905064::0::1::::<><><>0<>0<><>::uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn<>uid://dwabyonfs1f6o::::res://Scenes/Enemies/Boss/Boss.cs<>uid://c8qpobn0or6ca::::res://Assets/enemies/boss/boss.png<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn
+::res://Scenes/Enemies/Boss/::1778501578
+Boss.cs::CSharpScript::8703520942824118928::1778500680::0::1::::<>Node2D<><>0<>0<><>::
+Boss.tscn::PackedScene::7009417370249089437::1778501578::0::1::::<><><>0<>0<><>::uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn<>uid://dwabyonfs1f6o::::res://Scenes/Enemies/Boss/Boss.cs<>uid://c8qpobn0or6ca::::res://Assets/enemies/boss/boss.png<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn
 ::res://Scenes/Enemies/Eagle/::1776085157
 Eagle.cs::CSharpScript::6262184826463911336::1775484398::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Eagle.tscn::PackedScene::8671673733643964446::1776085157::0::1::::<><><>0<>0<><>::uid://cwcqdgvcb3j6s::::res://Scenes/Enemies/EnemyBase/EnemyBase.tscn<>uid://cvhpjffwrw5ou::::res://Scenes/Enemies/Eagle/Eagle.cs<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn
@@ -110,9 +110,9 @@ Snail.tscn::PackedScene::5707242731482149681::1776085056::0::1::::<><><>0<>0<><>
 ::res://Scenes/HitBox/::1774274773
 HitBox.cs::CSharpScript::9185470008448700805::1777386606::0::1::::<>Area2D<><>0<>1<><>::
 Hitbox.tscn::PackedScene::5770442110239843659::1774274773::0::1::::<><><>0<>0<><>::uid://d34rl4qc6lquv::::res://Scenes/HitBox/HitBox.cs
-::res://Scenes/LevelBase/::1777978483
-LevelBase.cs::CSharpScript::1153667071511381746::1776779858::0::1::::<>Node<><>0<>0<><>::
-LevelBase.tscn::PackedScene::3450573458406995423::1777978482::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn<>uid://dvsvg1targ8xm::::res://Scenes/Enemies/Eagle/Eagle.tscn<>uid://c64ocyqj7qvx2::::res://Scenes/Enemies/Boss/Boss.tscn<>uid://j84i5hbcgoq8::::res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn
+::res://Scenes/LevelBase/::1778584077
+LevelBase.cs::CSharpScript::1153667071511381746::1778501309::0::1::::<>Node<><>0<>0<><>::
+LevelBase.tscn::PackedScene::3450573458406995423::1778584077::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn<>uid://dvsvg1targ8xm::::res://Scenes/Enemies/Eagle/Eagle.tscn<>uid://c64ocyqj7qvx2::::res://Scenes/Enemies/Boss/Boss.tscn<>uid://j84i5hbcgoq8::::res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn<>uid://ep4ut27l0ra7::::res://Scenes/Objects/Checkpoint/Checkpoint.tscn
 ::res://Scenes/Main/::1771857454
 Main.cs::CSharpScript::2117359185024073803::1771857454::0::1::::<>Control<><>0<>0<><>::
 Main.tscn::PackedScene::7322088427511776818::1771857454::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://assets/sound/Farm Frolics.ogg<>uid://bg0t5xmaeaogu::::res://assets/fonts/LuckiestGuy-Regular.ttf
@@ -120,14 +120,16 @@ Main.tscn::PackedScene::7322088427511776818::1771857454::0::1::::<><><>0<>0<><>:
 ::res://Scenes/Objects/BulletBase/::1776085353
 BulletBase.cs::CSharpScript::4891638434652417614::1776085436::0::1::::<>Area2D<><>0<>0<><>::
 BulletBase.tscn::PackedScene::6208441024704974968::1776085353::0::1::::<><><>0<>0<><>::uid://cbxstnkx0ul15::::res://Scenes/Objects/BulletBase/BulletBase.cs<>uid://bsydbhgoevaf3::::res://Scenes/Objects/Shooter/LifeTime/LifeTime.tscn
-::res://Scenes/Objects/Checkpoint/::1777977537
+::res://Scenes/Objects/Checkpoint/::1778501430
+Checkpoint.cs::CSharpScript::4601327150513428306::1778501314::0::1::::<>Area2D<><>0<>0<><>::
+Checkpoint.tscn::PackedScene::313518590654359068::1778501430::0::1::::<><><>0<>0<><>::uid://ryetajrdirrx::::res://Assets/items/checkpoint.png<>uid://b6s6gk540j4v3::::res://Scenes/Objects/Checkpoint/Checkpoint.cs<>uid://xgpplrdxeo6f::::res://Assets/sound/checkpoint.wav
 ::res://Scenes/Objects/EnemyBullet/::1774961500
 EnemyBullet.tscn::PackedScene::8316929703745820968::1774961500::0::1::::<><><>0<>0<><>::uid://cupod72lhsg7a::::res://Scenes/Objects/BulletBase/BulletBase.tscn<>uid://da2084kswkskg::::res://Assets/items/bullet2.png
 ::res://Scenes/Objects/Explosion/::1776081563
 Explosion.cs::CSharpScript::4604224040439117067::1776081819::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 Explosion.tscn::PackedScene::3418873482195517782::1776081563::0::1::::<><><>0<>0<><>::uid://cbeyog8tijf2r::::res://Assets/explosion/enemy-deadth.png<>uid://bqlsc22wwc42d::::res://Assets/sound/pickup3.ogg<>uid://b6uk5rh6qn2ax::::res://Scenes/Objects/Explosion/Explosion.cs<>uid://c7giqqyybyivv::::res://Assets/sound/pickup5.ogg
 ::res://Scenes/Objects/ObjectMaker/::1776779924
-ObjectMaker.cs::CSharpScript::7645539007395506912::1776779115::0::1::::<>Node<><>0<>0<><>::
+ObjectMaker.cs::CSharpScript::7645539007395506912::1778500973::0::1::::<>Node<><>0<>0<><>::
 ObjectMaker.tscn::PackedScene::701600724330226601::1776779924::0::1::::<><><>0<>0<><>::uid://dg6s57pleusma::::res://Scenes/Objects/ObjectMaker/ObjectMaker.cs<>uid://boyel13t7vrw5::::res://Scenes/Objects/Explosion/Explosion.tscn<>uid://0883wugxymx8::::res://Scenes/Objects/Pickup/Pickup.tscn
 ::res://Scenes/Objects/Pickup/::1776244834
 Pickup.cs::CSharpScript::5312130430139457619::1776244485::0::1::::<>Area2D<><>0<>0<><>::
@@ -145,3 +147,6 @@ Player.cs::CSharpScript::7777292425589243284::1777290233::0::1::::<>CharacterBod
 Player.tscn::PackedScene::8290706201624041080::1777386297::0::1::::<><><>0<>0<><>::uid://di2m4txn8sflk::::res://Scenes/Player/Player.cs<>uid://qgtu5ev8dmbp::::res://Assets/player/player.png<>uid://c5dbi2mxgf10f::::res://Scenes/PlayerCam/PlayerCam.tscn<>uid://c82jcfga5jbed::::res://Assets/sound/jump.wav<>uid://cohilrj0xwffn::::res://Scenes/HitBox/Hitbox.tscn<>uid://iafhp6aswaa1::::res://Scenes/Objects/Shooter/Shooter.tscn<>uid://dsy3cloos1ou4::::res://Scenes/Objects/PlayerBullet/PlayerBullet.tscn<>uid://bhoocgfyn6i33::::res://Assets/sound/damage.wav
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::
+::res://UI/::1778584624
+::res://UI/GameHud/::0
+GameHud.tscn::PackedScene::1408101811198540528::1778584624::0::1::::<><><>0<>0<><>::

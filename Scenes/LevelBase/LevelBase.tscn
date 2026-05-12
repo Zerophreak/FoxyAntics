@@ -302,4 +302,4 @@ position = Vector2(1001, 6)
 [node name="Pickup" type="Node" parent="." unique_id=967178206]
 
 [node name="Checkpoint" parent="Pickup" unique_id=1737637629 instance=ExtResource("10_hcoko")]
-position = Vector2(1207, -1)
+position = Vector2(1204, 1)
