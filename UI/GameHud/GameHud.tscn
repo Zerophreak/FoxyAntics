@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://ucdh4fk35k53"]
 
+[ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_fnmra"]
+[ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="2_vfc0m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vfc0m"]
+font = ExtResource("1_fnmra")
+font_size = 48
+outline_size = 8
+outline_color = Color(7.1473325e-05, 3.3247106e-05, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kvsm"]
+font = ExtResource("1_fnmra")
+font_size = 48
+outline_size = 8
+outline_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+
 [node name="GameHud" type="Control" unique_id=1498861617]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +22,58 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MC" type="MarginContainer" parent="." unique_id=1055162026]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="HBC" type="HBoxContainer" parent="MC" unique_id=216213384]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 18
+
+[node name="LevelLabel" type="Label" parent="MC/HBC" unique_id=173310982]
+layout_mode = 2
+text = "LV: 1"
+label_settings = SubResource("LabelSettings_vfc0m")
+
+[node name="ScoreLabel" type="Label" parent="MC/HBC" unique_id=1163447730]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_4kvsm")
+
+[node name="HBHearts" type="HBoxContainer" parent="MC" unique_id=1845530946]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="H1" type="TextureRect" parent="MC/HBHearts" unique_id=233107767]
+layout_mode = 2
+texture = ExtResource("2_vfc0m")
+stretch_mode = 4
+
+[node name="H2" type="TextureRect" parent="MC/HBHearts" unique_id=14332598]
+layout_mode = 2
+texture = ExtResource("2_vfc0m")
+stretch_mode = 4
+
+[node name="H3" type="TextureRect" parent="MC/HBHearts" unique_id=309220977]
+layout_mode = 2
+texture = ExtResource("2_vfc0m")
+stretch_mode = 4
+
+[node name="H4" type="TextureRect" parent="MC/HBHearts" unique_id=654936420]
+layout_mode = 2
+texture = ExtResource("2_vfc0m")
+stretch_mode = 4
+
+[node name="H5" type="TextureRect" parent="MC/HBHearts" unique_id=1340574729]
+layout_mode = 2
+texture = ExtResource("2_vfc0m")
+stretch_mode = 4

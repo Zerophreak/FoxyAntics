@@ -1,3 +1,7 @@
+TextureRect
+HBoxContainer
+Label
+MarginContainer
 AnimationTree
 AnimationPlayer
 AudioStreamPlayer2D
@@ -9,5 +13,3 @@ Timer
 Node
 AnimatedSprite2D
 RayCast2D
-VisibleOnScreenNotifier2D
-CharacterBody2D
