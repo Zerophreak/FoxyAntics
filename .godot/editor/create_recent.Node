@@ -1,3 +1,4 @@
+ColorRect
 CanvasLayer
 TextureRect
 HBoxContainer
@@ -12,4 +13,3 @@ Area2D
 Node2D
 Timer
 Node
-AnimatedSprite2D
