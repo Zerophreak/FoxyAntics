@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779189353
+::res://::1779709476
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -148,5 +148,5 @@ Player.tscn::PackedScene::8290706201624041080::1777386297::0::1::::<><><>0<>0<><
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::
 ::res://UI/::1778584655
-::res://UI/GameHud/::1778585198
-GameHud.tscn::PackedScene::1408101811198540528::1778585198::0::1::::<><><>0<>0<><>::uid://bg0t5xmaeaogu::::res://Assets/fonts/LuckiestGuy-Regular.ttf<>uid://dbto5u2fkpno2::::res://Assets/items/pixel heart 2.png
+::res://UI/GameHud/::1779190528
+GameHud.tscn::PackedScene::1408101811198540528::1779190528::0::1::::<><><>0<>0<><>::uid://bg0t5xmaeaogu::::res://Assets/fonts/LuckiestGuy-Regular.ttf<>uid://dbto5u2fkpno2::::res://Assets/items/pixel heart 2.png

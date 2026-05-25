@@ -1,8 +1,9 @@
+Label
+VBoxContainer
 ColorRect
 CanvasLayer
 TextureRect
 HBoxContainer
-Label
 MarginContainer
 AnimationTree
 AnimationPlayer
@@ -11,5 +12,3 @@ Sprite2D
 CollisionShape2D
 Area2D
 Node2D
-Timer
-Node

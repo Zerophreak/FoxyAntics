@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_fnmra"]
 [ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="2_vfc0m"]
+[ext_resource type="LabelSettings" uid="uid://uwjhawm5udss" path="res://Resources/new_label_settings.tres" id="3_4kvsm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vfc0m"]
 font = ExtResource("1_fnmra")
@@ -14,6 +15,13 @@ font = ExtResource("1_fnmra")
 font_size = 48
 outline_size = 8
 outline_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_swjar"]
+font = ExtResource("1_fnmra")
+font_size = 64
+font_color = Color(0.69411767, 0.0627451, 0.078431375, 1)
+outline_size = 12
+outline_color = Color(1, 0.96862745, 0.94509804, 0.95686275)
 
 [node name="GameHud" type="Control" unique_id=1498861617]
 layout_mode = 3
@@ -79,6 +87,7 @@ texture = ExtResource("2_vfc0m")
 stretch_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1436946810]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,3 +95,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.27058825, 1, 1, 0.2)
+
+[node name="VBC" type="VBoxContainer" parent="ColorRect" unique_id=1108518700]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -76.5
+offset_right = 223.0
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="ColorRect/VBC" unique_id=1354585081]
+layout_mode = 2
+text = "Game Over"
+label_settings = ExtResource("3_4kvsm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/VBC" unique_id=503458858]
+layout_mode = 2
+text = "Press Shoot"
+label_settings = SubResource("LabelSettings_swjar")
+horizontal_alignment = 1
+vertical_alignment = 1
