@@ -3,14 +3,7 @@
 [ext_resource type="Script" uid="uid://5fwujp8jf3yt" path="res://Scenes/Main/Main.cs" id="1_p8rbg"]
 [ext_resource type="Texture2D" uid="uid://gw4ll5rcuo5q" path="res://Assets/backgrounds/game_background_2/game_background_2.png" id="2_i3fi7"]
 [ext_resource type="AudioStream" uid="uid://bxaobp1dc6jjq" path="res://Assets/sound/Farm Frolics.ogg" id="3_o8wgc"]
-[ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="4_w20t6"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_aw1lf"]
-font = ExtResource("4_w20t6")
-font_size = 84
-font_color = Color(0.6954972, 0.0640775, 0.90139484, 1)
-outline_size = 12
-outline_color = Color(1, 0.96862745, 0.94509804, 0.95686275)
+[ext_resource type="LabelSettings" uid="uid://uwjhawm5udss" path="res://Resources/new_label_settings.tres" id="4_i3fi7"]
 
 [node name="Main" type="Control" unique_id=2049642284]
 layout_mode = 3
@@ -48,6 +41,6 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Foxy Antics"
-label_settings = SubResource("LabelSettings_aw1lf")
+label_settings = ExtResource("4_i3fi7")
 horizontal_alignment = 1
 vertical_alignment = 1
