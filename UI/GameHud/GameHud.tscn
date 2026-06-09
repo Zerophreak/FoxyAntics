@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ucdh4fk35k53"]
 
+[ext_resource type="Script" uid="uid://whtovbmmokgx" path="res://UI/GameHud/GameHud.cs" id="1_0n2ex"]
 [ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_fnmra"]
 [ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="2_vfc0m"]
 [ext_resource type="LabelSettings" uid="uid://uwjhawm5udss" path="res://Resources/new_label_settings.tres" id="3_4kvsm"]
@@ -32,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0n2ex")
 
 [node name="MC" type="MarginContainer" parent="." unique_id=1055162026]
 layout_mode = 1
