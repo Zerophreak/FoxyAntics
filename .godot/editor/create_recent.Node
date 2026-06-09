@@ -1,3 +1,6 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
+Timer
 Label
 VBoxContainer
 ColorRect
@@ -7,8 +10,6 @@ HBoxContainer
 MarginContainer
 AnimationTree
 AnimationPlayer
-AudioStreamPlayer2D
 Sprite2D
 CollisionShape2D
 Area2D
-Node2D

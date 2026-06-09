@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779709476
+::res://::1781010691
 icon.png::CompressedTexture2D::5632348544818143903::1771857454::1771858474::1::::<><><>0<>0<>5cbbfd1cb6ca29446f44053aa4bdac13<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 icon.svg::CompressedTexture2D::5983509795694706582::1771857454::1771858474::1::::<><><>0<>0<>00e76632bb45dd6e4306a7146e0ed028<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1771857454
@@ -111,9 +111,9 @@ Snail.tscn::PackedScene::5707242731482149681::1776085056::0::1::::<><><>0<>0<><>
 ::res://Scenes/HitBox/::1774274773
 HitBox.cs::CSharpScript::9185470008448700805::1777386606::0::1::::<>Area2D<><>0<>1<><>::
 Hitbox.tscn::PackedScene::5770442110239843659::1774274773::0::1::::<><><>0<>0<><>::uid://d34rl4qc6lquv::::res://Scenes/HitBox/HitBox.cs
-::res://Scenes/LevelBase/::1778585864
+::res://Scenes/LevelBase/::1780992266
 LevelBase.cs::CSharpScript::1153667071511381746::1778501309::0::1::::<>Node<><>0<>0<><>::
-LevelBase.tscn::PackedScene::3450573458406995423::1778585864::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn<>uid://dvsvg1targ8xm::::res://Scenes/Enemies/Eagle/Eagle.tscn<>uid://c64ocyqj7qvx2::::res://Scenes/Enemies/Boss/Boss.tscn<>uid://j84i5hbcgoq8::::res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn<>uid://ep4ut27l0ra7::::res://Scenes/Objects/Checkpoint/Checkpoint.tscn<>uid://ucdh4fk35k53::::res://UI/GameHud/GameHud.tscn
+LevelBase.tscn::PackedScene::3450573458406995423::1780992266::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn<>uid://dvsvg1targ8xm::::res://Scenes/Enemies/Eagle/Eagle.tscn<>uid://c64ocyqj7qvx2::::res://Scenes/Enemies/Boss/Boss.tscn<>uid://j84i5hbcgoq8::::res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn<>uid://ep4ut27l0ra7::::res://Scenes/Objects/Checkpoint/Checkpoint.tscn<>uid://ucdh4fk35k53::::res://UI/GameHud/GameHud.tscn
 ::res://Scenes/Main/::1779716822
 Main.cs::CSharpScript::2117359185024073803::1771857454::0::1::::<>Control<><>0<>0<><>::
 Main.tscn::PackedScene::7322088427511776818::1779716822::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://Assets/sound/Farm Frolics.ogg<>uid://uwjhawm5udss::::res://Resources/new_label_settings.tres
