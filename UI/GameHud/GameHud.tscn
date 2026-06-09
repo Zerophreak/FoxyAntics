@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://bg0t5xmaeaogu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_fnmra"]
 [ext_resource type="Texture2D" uid="uid://dbto5u2fkpno2" path="res://Assets/items/pixel heart 2.png" id="2_vfc0m"]
 [ext_resource type="LabelSettings" uid="uid://uwjhawm5udss" path="res://Resources/new_label_settings.tres" id="3_4kvsm"]
+[ext_resource type="AudioStream" uid="uid://bc10c0fddx1ul" path="res://Assets/sound/you_win.ogg" id="4_iwbc6"]
+[ext_resource type="AudioStream" uid="uid://bk117hgdeg3k6" path="res://Assets/sound/game_over.ogg" id="5_0n2ex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vfc0m"]
 font = ExtResource("1_fnmra")
@@ -123,3 +125,11 @@ text = "Press Shoot"
 label_settings = SubResource("LabelSettings_swjar")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CompleteTimer" type="Timer" parent="." unique_id=1332083277]
+
+[node name="YouWinSound" type="AudioStreamPlayer" parent="." unique_id=1816753552]
+stream = ExtResource("4_iwbc6")
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=1160589172]
+stream = ExtResource("5_0n2ex")
