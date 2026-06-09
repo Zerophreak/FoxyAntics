@@ -45,6 +45,7 @@ public partial class GameHud : Control
 		_colorRect.Show();
 		_gameOverLabel.Text = "Level Complete";
 		_completeTimer.Start();
+		_winSound.Play();
     }
 
 	private void OncompletedTimerTimeout()
