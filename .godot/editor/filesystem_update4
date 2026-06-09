@@ -1,3 +1,1 @@
-res://Scenes/Main/Main.tscn
-res://UI/GameHud/GameHud.tscn
-res://Resources/new_label_settings.tres
+res://Scenes/LevelBase/LevelBase.tscn

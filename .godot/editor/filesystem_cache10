@@ -85,11 +85,12 @@ GameConstants.cs::CSharpScript::586223385834135203::1774348235::0::1::::<><><>0<
 GameManager.cs::CSharpScript::6468328429381770713::1771857454::0::1::::<>Node<><>0<>0<><>::
 ScoreManager.cs::CSharpScript::7971972130546852175::1771857454::0::1::::<>Node<><>0<>0<><>::
 SignalHub.cs::CSharpScript::8346202239274529438::1778500571::0::1::::<>Node<><>0<>0<><>::
-::res://Resources/::1771857454
+::res://Resources/::1779716666
 LG_blue_64.tres::LabelSettings::4289201097798638372::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_pink_96.tres::LabelSettings::7602017344158547840::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_white_24.tres::LabelSettings::8732921665724531969::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
 LG_white_48.tres::LabelSettings::6946145316957996209::1771857454::0::1::::<><><>0<>0<><>::uid://b4pkq6ib5fc5r::::res://assets/fonts/LuckiestGuy-Regular.ttf
+new_label_settings.tres::LabelSettings::1449752171413997698::1779716666::0::1::::<><><>0<>0<><>::uid://bg0t5xmaeaogu::::res://Assets/fonts/LuckiestGuy-Regular.ttf
 ::res://Scenes/::1774960071
 ::res://Scenes/Enemies/::1777289595
 ::res://Scenes/Enemies/Boss/::1778501578
@@ -113,9 +114,9 @@ Hitbox.tscn::PackedScene::5770442110239843659::1774274773::0::1::::<><><>0<>0<><
 ::res://Scenes/LevelBase/::1778585864
 LevelBase.cs::CSharpScript::1153667071511381746::1778501309::0::1::::<>Node<><>0<>0<><>::
 LevelBase.tscn::PackedScene::3450573458406995423::1778585864::0::1::::<><><>0<>0<><>::uid://qo3y0x3gj0qg::::res://Scenes/LevelBase/LevelBase.cs<>uid://cv8q48ridr1ob::::res://Assets/tiles/Terrain (16x16).png<>uid://dqq1u8mtxumw3::::res://Scenes/Objects/EnemyBullet/EnemyBullet.tscn<>uid://dqecyqfebayce::::res://Scenes/Player/Player.tscn<>uid://cnkvpo1ajktw0::::res://Scenes/Enemies/Snail/Snail.tscn<>uid://clb12lib5rv24::::res://Scenes/Enemies/Frog/Frog.tscn<>uid://dvsvg1targ8xm::::res://Scenes/Enemies/Eagle/Eagle.tscn<>uid://c64ocyqj7qvx2::::res://Scenes/Enemies/Boss/Boss.tscn<>uid://j84i5hbcgoq8::::res://Scenes/Objects/ObjectMaker/ObjectMaker.tscn<>uid://ep4ut27l0ra7::::res://Scenes/Objects/Checkpoint/Checkpoint.tscn<>uid://ucdh4fk35k53::::res://UI/GameHud/GameHud.tscn
-::res://Scenes/Main/::1771857454
+::res://Scenes/Main/::1779716822
 Main.cs::CSharpScript::2117359185024073803::1771857454::0::1::::<>Control<><>0<>0<><>::
-Main.tscn::PackedScene::7322088427511776818::1771857454::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://assets/sound/Farm Frolics.ogg<>uid://bg0t5xmaeaogu::::res://assets/fonts/LuckiestGuy-Regular.ttf
+Main.tscn::PackedScene::7322088427511776818::1779716822::0::1::::<><><>0<>0<><>::uid://5fwujp8jf3yt::::res://Scenes/Main/Main.cs<>uid://gw4ll5rcuo5q::::res://Assets/backgrounds/game_background_2/game_background_2.png<>uid://bxaobp1dc6jjq::::res://Assets/sound/Farm Frolics.ogg<>uid://uwjhawm5udss::::res://Resources/new_label_settings.tres
 ::res://Scenes/Objects/::1777977537
 ::res://Scenes/Objects/BulletBase/::1776085353
 BulletBase.cs::CSharpScript::4891638434652417614::1776085436::0::1::::<>Area2D<><>0<>0<><>::
@@ -148,5 +149,5 @@ Player.tscn::PackedScene::8290706201624041080::1777386297::0::1::::<><><>0<>0<><
 ::res://Scenes/PlayerCam/::1771857454
 PlayerCam.tscn::PackedScene::6884776250854725671::1771857454::0::1::::<><><>0<>0<><>::
 ::res://UI/::1778584655
-::res://UI/GameHud/::1779190528
-GameHud.tscn::PackedScene::1408101811198540528::1779190528::0::1::::<><><>0<>0<><>::uid://bg0t5xmaeaogu::::res://Assets/fonts/LuckiestGuy-Regular.ttf<>uid://dbto5u2fkpno2::::res://Assets/items/pixel heart 2.png
+::res://UI/GameHud/::1779716724
+GameHud.tscn::PackedScene::1408101811198540528::1779716724::0::1::::<><><>0<>0<><>::uid://bg0t5xmaeaogu::::res://Assets/fonts/LuckiestGuy-Regular.ttf<>uid://dbto5u2fkpno2::::res://Assets/items/pixel heart 2.png<>uid://uwjhawm5udss::::res://Resources/new_label_settings.tres
