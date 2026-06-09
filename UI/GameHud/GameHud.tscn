@@ -26,7 +26,8 @@ font_color = Color(0.69411767, 0.0627451, 0.078431375, 1)
 outline_size = 12
 outline_color = Color(1, 0.96862745, 0.94509804, 0.95686275)
 
-[node name="GameHud" type="Control" unique_id=1498861617]
+[node name="GameHud" type="Control" unique_id=1498861617 node_paths=PackedStringArray("_colorRect", "_gameOverLabel", "_completeTimer", "_winSound", "_gameoverSound")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,6 +35,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0n2ex")
+_colorRect = NodePath("ColorRect")
+_gameOverLabel = NodePath("ColorRect/VBC/GameOverLabel")
+_completeTimer = NodePath("CompleteTimer")
+_winSound = NodePath("YouWinSound")
+_gameoverSound = NodePath("GameOverSound")
 
 [node name="MC" type="MarginContainer" parent="." unique_id=1055162026]
 layout_mode = 1
