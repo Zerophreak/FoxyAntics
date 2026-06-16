@@ -19,7 +19,7 @@ public partial class GameHud : Control
 	{
 		_colorRect.Hide();
 		SignalHub.Instance.OnLevelComplete += OnLevelComplete;
-		SignalHub.Instance.Onscored += OnScored;
+		SignalHub.Instance.OnScored += OnScored;
 		_completeTimer.Timeout += OncompletedTimerTimeout;
 
 		UpdateScoreLabel(0);
@@ -28,7 +28,7 @@ public partial class GameHud : Control
     public override void _ExitTree()
     {
 		SignalHub.Instance.OnLevelComplete -= OnLevelComplete;
-		SignalHub.Instance.Onscored -= OnScored;
+		SignalHub.Instance.OnScored -= OnScored;
 	}
 
 	public override void _UnhandledInput(InputEvent @event)

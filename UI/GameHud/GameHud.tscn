@@ -26,7 +26,7 @@ font_color = Color(0.69411767, 0.0627451, 0.078431375, 1)
 outline_size = 12
 outline_color = Color(1, 0.96862745, 0.94509804, 0.95686275)
 
-[node name="GameHud" type="Control" unique_id=1498861617 node_paths=PackedStringArray("_colorRect", "_gameOverLabel", "_completeTimer", "_winSound", "_gameoverSound")]
+[node name="GameHud" type="Control" unique_id=1498861617 node_paths=PackedStringArray("_colorRect", "_gameOverLabel", "_ScoreLabel", "_completeTimer", "_winSound", "_gameoverSound")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -37,6 +37,7 @@ grow_vertical = 2
 script = ExtResource("1_0n2ex")
 _colorRect = NodePath("ColorRect")
 _gameOverLabel = NodePath("ColorRect/VBC/GameOverLabel")
+_ScoreLabel = NodePath("MC/HBScore/ScoreLabel")
 _completeTimer = NodePath("CompleteTimer")
 _winSound = NodePath("YouWinSound")
 _gameoverSound = NodePath("GameOverSound")
@@ -50,18 +51,18 @@ theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 
-[node name="HBC" type="HBoxContainer" parent="MC" unique_id=216213384]
+[node name="HBScore" type="HBoxContainer" parent="MC" unique_id=216213384]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/separation = 18
 
-[node name="LevelLabel" type="Label" parent="MC/HBC" unique_id=173310982]
+[node name="LevelLabel" type="Label" parent="MC/HBScore" unique_id=173310982]
 layout_mode = 2
 text = "LV: 1"
 label_settings = SubResource("LabelSettings_vfc0m")
 
-[node name="ScoreLabel" type="Label" parent="MC/HBC" unique_id=1163447730]
+[node name="ScoreLabel" type="Label" parent="MC/HBScore" unique_id=1163447730]
 layout_mode = 2
 text = "0000"
 label_settings = SubResource("LabelSettings_4kvsm")
