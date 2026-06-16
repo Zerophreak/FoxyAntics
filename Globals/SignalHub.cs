@@ -12,7 +12,7 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnCreatePickupEventHandler(Vector2 pos);
 	[Signal] public delegate void OnBossKilledEventHandler();
 	[Signal] public delegate void OnLevelCompleteEventHandler();
-	[Signal] public delegate void OnScoredEventhandler(int points);
+	[Signal] public delegate void OnScoredEventHandler(int points);
 	
 	public override void _Ready()
 	{
@@ -46,6 +46,6 @@ public partial class SignalHub : Node
 
 	public static void EmitOnScored(int points)
 	{
-		Instance.EmitSignal(SignalName.Onscored, points);
+		Instance.EmitSignal(SignalName.OnScored, points);
 	}
 }

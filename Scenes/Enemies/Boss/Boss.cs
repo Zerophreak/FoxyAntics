@@ -10,8 +10,8 @@ public partial class Boss : Node2D
 	[Export] private Shooter _Shooter;
 	[Export] private Node2D _visuals;
 	[Export] private HitBox _hitBox;
-	[Export] private int _lives = 2;
-	[Export] private int points = 20;
+	[Export] private int _lives = 3;
+	[Export] private int _points = 20;
 
 	private Player _playerRef;
 	private AnimationNodeStateMachinePlayback _state;

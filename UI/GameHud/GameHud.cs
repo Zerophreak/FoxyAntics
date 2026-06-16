@@ -6,7 +6,7 @@ public partial class GameHud : Control
 {
 	[Export] private ColorRect _colorRect;
 	[Export] private Label _gameOverLabel;
-	[Export] private label _ScoreLabel;
+	[Export] private Label _ScoreLabel;
 	[Export] private Timer _completeTimer; 
 	[Export] private AudioStreamPlayer _winSound;
 	[Export] private AudioStreamPlayer _gameoverSound;
