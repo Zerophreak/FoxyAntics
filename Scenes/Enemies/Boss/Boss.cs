@@ -11,7 +11,7 @@ public partial class Boss : Node2D
 	[Export] private Node2D _visuals;
 	[Export] private HitBox _hitBox;
 	[Export] private int _lives = 2;
-	[Export] private int points = 8;
+	[Export] private int points = 20;
 
 	private Player _playerRef;
 	private AnimationNodeStateMachinePlayback _state;
@@ -63,6 +63,7 @@ public partial class Boss : Node2D
     private void Die()
     {
 		SignalHub.EmitOnBossKilled();
+		SignalHub.EmitOnScored(_points);
         QueueFree();
     }
 
