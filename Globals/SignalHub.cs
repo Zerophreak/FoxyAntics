@@ -10,10 +10,9 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnCreateBulletEventHandler(Vector2 pos, Vector2 dir, float speed, PackedScene scene);
 	[Signal] public delegate void OnCreateExplosionEventHandler(Vector2 pos);
 	[Signal] public delegate void OnCreatePickupEventHandler(Vector2 pos);
-
 	[Signal] public delegate void OnBossKilledEventHandler();
-
 	[Signal] public delegate void OnLevelCompleteEventHandler();
+	[Signal] public delegate void OnScoredEventhandler(int points);
 	
 	public override void _Ready()
 	{
@@ -43,5 +42,10 @@ public partial class SignalHub : Node
 	public static void EmitOnLevelComplete()
 	{
 		Instance.EmitSignal(SignalName.OnLevelComplete);
+	}
+
+	public static void EmitOnScored(int points)
+	{
+		Instance.EmitSignal(SignalName.Onscored, points);
 	}
 }
