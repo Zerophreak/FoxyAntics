@@ -64,7 +64,7 @@ label_settings = SubResource("LabelSettings_vfc0m")
 
 [node name="ScoreLabel" type="Label" parent="MC/HBScore" unique_id=1163447730]
 layout_mode = 2
-text = "0000"
+text = "asdads"
 label_settings = SubResource("LabelSettings_4kvsm")
 
 [node name="HBHearts" type="HBoxContainer" parent="MC" unique_id=1845530946]
