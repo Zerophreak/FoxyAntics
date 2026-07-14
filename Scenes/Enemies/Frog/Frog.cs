@@ -7,6 +7,7 @@ public partial class Frog : EnemyBase
 	private readonly Vector2 JUMP_VEL_L = new Vector2(-100.0f, -150.0f);
 	private bool _jump = false;
 
+
     public override void _Ready()
     {
         base._Ready();

@@ -6,13 +6,13 @@ using System.Threading.Tasks.Dataflow;
 public partial class EnemyBase : CharacterBody2D
 {
 	[Export] private VisibleOnScreenNotifier2D _screenNotifier;
-	[Export] protected AnimatedSprite2D _animatedSprite2D;
 	[Export] private HitBox _hitBox;
-	[Export] protected Timer _timer;
 
-	[Export] private int _points = 5;
+	[Export] protected Timer _timer;
+	[Export] protected AnimatedSprite2D _animatedSprite2D;
 	[Export] protected float _speed = 30.0f;
 	[Export] protected float _fallenOffY = 200.0f;
+	[Export] private int _points = 5;
 
 	protected float _gravity = 800.0f;
 	protected Player _playerRef; 
@@ -78,6 +78,7 @@ public partial class EnemyBase : CharacterBody2D
 	{
 		SignalHub.EmitOnCreatExplosion(GlobalPosition);
 		SignalHub.EmitOnCreatePickup(GlobalPosition);
+		SignalHub.EmitOnScored(_points);
 		QueueFree();
 	}
 }
