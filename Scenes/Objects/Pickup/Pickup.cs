@@ -30,6 +30,7 @@ public partial class Pickup : Area2D
 		_pickupSound.Play();
 		Hide();
 		AreaEntered -= OnAreaEntered;
+		SignalHub.EmitOnScored(_points);
 	}
 
 	private void OnSoundFinished()
